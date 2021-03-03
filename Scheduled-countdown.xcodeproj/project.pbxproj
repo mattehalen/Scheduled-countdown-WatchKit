@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,9 @@
 		8414900925EE8C5300CF054F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414900825EE8C5300CF054F /* ComplicationController.swift */; };
 		8414900B25EE8C5300CF054F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8414900A25EE8C5300CF054F /* Assets.xcassets */; };
 		8414900E25EE8C5300CF054F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8414900D25EE8C5300CF054F /* Preview Assets.xcassets */; };
+		8414902625EE8E6B00CF054F /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 8414902525EE8E6B00CF054F /* SocketIO */; };
+		8414902B25EE8E8500CF054F /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 8414902A25EE8E8500CF054F /* SocketIO */; };
+		8414902D25EE8FD200CF054F /* Settings-Watch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8414902C25EE8FD200CF054F /* Settings-Watch.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,8 @@
 		8414900D25EE8C5300CF054F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8414900F25EE8C5300CF054F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8414901025EE8C5300CF054F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8414902C25EE8FD200CF054F /* Settings-Watch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Settings-Watch.bundle"; sourceTree = "<group>"; };
+		8414902E25EE8FEA00CF054F /* Scheduled-countdown WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Scheduled-countdown WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8414902625EE8E6B00CF054F /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8414902B25EE8E8500CF054F /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,12 +159,14 @@
 		84148FB725EE8C5200CF054F = {
 			isa = PBXGroup;
 			children = (
+				8414902C25EE8FD200CF054F /* Settings-Watch.bundle */,
 				84148FC225EE8C5200CF054F /* Scheduled-countdown */,
 				84148FD925EE8C5200CF054F /* Scheduled-countdownTests */,
 				84148FE425EE8C5200CF054F /* Scheduled-countdownUITests */,
 				84148FEE25EE8C5200CF054F /* Scheduled-countdown WatchKit App */,
 				84148FFD25EE8C5300CF054F /* Scheduled-countdown WatchKit Extension */,
 				84148FC125EE8C5200CF054F /* Products */,
+				8414902925EE8E8500CF054F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +235,7 @@
 		84148FFD25EE8C5300CF054F /* Scheduled-countdown WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8414902E25EE8FEA00CF054F /* Scheduled-countdown WatchKit Extension.entitlements */,
 				84148FFE25EE8C5300CF054F /* ContentView.swift */,
 				8414900025EE8C5300CF054F /* HostingController.swift */,
 				8414900225EE8C5300CF054F /* ExtensionDelegate.swift */,
@@ -248,6 +258,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8414902925EE8E8500CF054F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,6 +283,9 @@
 				84148FED25EE8C5200CF054F /* PBXTargetDependency */,
 			);
 			name = "Scheduled-countdown";
+			packageProductDependencies = (
+				8414902525EE8E6B00CF054F /* SocketIO */,
+			);
 			productName = "Scheduled-countdown";
 			productReference = 84148FC025EE8C5200CF054F /* Scheduled-countdown.app */;
 			productType = "com.apple.product-type.application";
@@ -334,8 +354,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				8414902825EE8E8000CF054F /* PBXTargetDependency */,
 			);
 			name = "Scheduled-countdown WatchKit Extension";
+			packageProductDependencies = (
+				8414902A25EE8E8500CF054F /* SocketIO */,
+			);
 			productName = "Scheduled-countdown WatchKit Extension";
 			productReference = 84148FF925EE8C5300CF054F /* Scheduled-countdown WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -378,6 +402,9 @@
 				Base,
 			);
 			mainGroup = 84148FB725EE8C5200CF054F;
+			packageReferences = (
+				8414902425EE8E6B00CF054F /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
 			productRefGroup = 84148FC125EE8C5200CF054F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -398,6 +425,7 @@
 			files = (
 				84148FD025EE8C5200CF054F /* LaunchScreen.storyboard in Resources */,
 				84148FCD25EE8C5200CF054F /* Preview Assets.xcassets in Resources */,
+				8414902D25EE8FD200CF054F /* Settings-Watch.bundle in Resources */,
 				84148FCA25EE8C5200CF054F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +526,10 @@
 			isa = PBXTargetDependency;
 			target = 84148FF825EE8C5300CF054F /* Scheduled-countdown WatchKit Extension */;
 			targetProxy = 84148FFB25EE8C5300CF054F /* PBXContainerItemProxy */;
+		};
+		8414902825EE8E8000CF054F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 8414902725EE8E8000CF054F /* SocketIO */;
 		};
 /* End PBXTargetDependency section */
 
@@ -639,6 +671,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Scheduled-countdown WatchKit Extension/Scheduled-countdown WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Scheduled-countdown WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = F8993Q6N82;
@@ -663,6 +696,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Scheduled-countdown WatchKit Extension/Scheduled-countdown WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Scheduled-countdown WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = F8993Q6N82;
@@ -903,6 +937,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8414902425EE8E6B00CF054F /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8414902525EE8E6B00CF054F /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8414902425EE8E6B00CF054F /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+		8414902725EE8E8000CF054F /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8414902425EE8E6B00CF054F /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+		8414902A25EE8E8500CF054F /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8414902425EE8E6B00CF054F /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84148FB825EE8C5200CF054F /* Project object */;
 }
