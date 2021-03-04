@@ -9,7 +9,7 @@
 import SwiftUI
 import UIKit
 import SocketIO
-import Foundation
+import UserNotifications
 
 func hexStringToUIColor (hex:String) -> UIColor {
     var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
@@ -47,25 +47,30 @@ final class Service: ObservableObject{
     @Published var default_ip_setting = ""
     @Published var default_notification_setting = true
     
-    lazy var ipString : String = "http://172.20.10.4:3000"
-    
-    private lazy var manager = SocketManager(socketURL: URL(string: ipString)!, config: [.log(false),.compress,.path("/ws")])
-    
     let defaults = UserDefaults.init(suiteName: "group.com.Scheduled-countdown.settings")
+    lazy var default_ip = defaults?.string(forKey: "ip_adress") ?? "Nothing"
+    lazy var ipString : String = "http://\(default_ip):3000"
+    lazy var  manager = SocketManager(socketURL: URL(string: ipString)!, config: [.log(false),.compress,.path("/ws")])
 
-    
     init(){
-        let default_ip = defaults?.string(forKey: "ip_adress") ?? "Nothing"
+        print(default_ip)
         let default_notification = defaults?.bool(forKey: "use_notifications")
         
         if(default_notification == true){
             self.default_notification_setting = true
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                if success {
+                    print("All set!")
+                } else if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+            
         }else if(default_notification == false){
             self.default_notification_setting = false
         }
         self.default_ip_setting = String(default_ip)
-        
-        
+
         let socket = manager.defaultSocket
         socket.on(clientEvent: .connect){ (data, ack) in
             print("Connected")
@@ -79,6 +84,26 @@ final class Service: ObservableObject{
         socket.on("message"){ [weak self] (data,ack) in
             if let getSocket = data as? [[String:Any]]{
                 if let socketType = getSocket[0]["type"] as? String {
+                    
+                    //---------- NOTIFICATIONS
+                    let center = UNUserNotificationCenter.current()
+                    center.removeAllDeliveredNotifications() // To remove all delivered notifications
+                    center.removeAllPendingNotificationRequests()
+                    
+                    //---- 5min
+                    let content_five = UNMutableNotificationContent()
+                    content_five.title = "5min"
+                    //content_five.subtitle = ""
+                    content_five.sound = UNNotificationSound.default
+
+                    let trigger_five = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                    let request_five = UNNotificationRequest(identifier: UUID().uuidString, content: content_five, trigger: trigger_five)
+
+                    // add our notification request
+                    UNUserNotificationCenter.current().add(request_five)
+                    
+                    //----------
+                    
                     
                     if socketType == "currentTime"{
                         let socketMessage = getSocket[0]["message"]
@@ -100,6 +125,7 @@ final class Service: ObservableObject{
                         var socketCountDownInMs = -1000000
                         if socketObj!["countDownTimeInMS"] as? Int != nil {
                             socketCountDownInMs = socketObj!["countDownTimeInMS"] as! Int
+                            mathiashalen(countdown: socketCountDownInMs)
                         }else{
                         }
                         
@@ -139,7 +165,6 @@ final class Service: ObservableObject{
                             self!.title = socketTitle ?? ""
                             self!.time = socketTime!
                             self!.countDownBool = socketBool!
-                            self!.ip = self!.ipString
                         }
                     }
                 }
@@ -149,6 +174,71 @@ final class Service: ObservableObject{
         }
         socket.connect()
     }
+}
+
+func mathiashalen(countdown:Int) -> Int {
+    
+    UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+
+    let fiveMin     = ((countdown + (5*60000)) / 1000) * -1
+    let fourMin     = ((countdown + (4*60000)) / 1000) * -1
+    let threeMin    = ((countdown + (3*60000)) / 1000) * -1
+    let twoMin      = ((countdown + (2*60000)) / 1000) * -1
+    let oneMin      = ((countdown + (1*60000)) / 1000) * -1
+    
+    //---------- 5min
+    if(fiveMin > 0){
+        let content_five = UNMutableNotificationContent()
+        content_five.title = "5 min"
+        content_five.subtitle = ""
+        content_five.sound = UNNotificationSound.default
+        let trigger_five = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(fiveMin), repeats: false)
+        let request_five = UNNotificationRequest(identifier: UUID().uuidString, content: content_five, trigger: trigger_five)
+        UNUserNotificationCenter.current().add(request_five)
+    }
+    //---------- 4min
+    if(fourMin > 0){
+        let content_four = UNMutableNotificationContent()
+        content_four.title = "4 min"
+        content_four.subtitle = ""
+        content_four.sound = UNNotificationSound.default
+        let trigger_four = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(fourMin), repeats: false)
+        let request_four = UNNotificationRequest(identifier: UUID().uuidString, content: content_four, trigger: trigger_four)
+        UNUserNotificationCenter.current().add(request_four)
+    }
+    //---------- 3min
+    if(threeMin > 0){
+        let content_three = UNMutableNotificationContent()
+        content_three.title = "3 min"
+        content_three.subtitle = ""
+        content_three.sound = UNNotificationSound.default
+        let trigger_three = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(threeMin), repeats: false)
+        let request_three = UNNotificationRequest(identifier: UUID().uuidString, content: content_three, trigger: trigger_three)
+        UNUserNotificationCenter.current().add(request_three)
+    }
+    //---------- 2min
+    if(twoMin > 0){
+        let content_two = UNMutableNotificationContent()
+        content_two.title = "2 min"
+        content_two.subtitle = ""
+        content_two.sound = UNNotificationSound.default
+        let trigger_two = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(twoMin), repeats: false)
+        let request_two = UNNotificationRequest(identifier: UUID().uuidString, content: content_two, trigger: trigger_two)
+        UNUserNotificationCenter.current().add(request_two)
+    }
+    //---------- 1min
+    if(oneMin > 0){
+        let content_one = UNMutableNotificationContent()
+        content_one.title = "1 min"
+        content_one.subtitle = ""
+        content_one.sound = UNNotificationSound.default
+        let trigger_one = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(oneMin), repeats: false)
+        let request_one = UNNotificationRequest(identifier: UUID().uuidString, content: content_one, trigger: trigger_one)
+        UNUserNotificationCenter.current().add(request_one)
+    }
+    
+
+    return countdown
 }
 
 struct ContentView: View {
@@ -166,32 +256,12 @@ struct ContentView: View {
             VStack{
                 Text(service.default_ip_setting)
                 Text(String(service.default_notification_setting))
-                if(service.connected){
                     if(service.countDownBool){
                         Text(service.title).font(.subheadline)
                         Text(service.time).fontWeight(.heavy).font(.title)
                     }else{
                         Text(service.currentTime).fontWeight(.heavy).font(.largeTitle)
                     }
-                    
-                    
-                }else{
-                    TextField("Enter ipAdress...", text: $ipAdress, onEditingChanged: { (changed) in
-                        print("ipAdress onEditingChanged - \(changed)")
-                    }) {
-                        print("ipAdress onCommit")
-                        UserDefaults.standard.set(self.ipAdress, forKey: "ipAdress")
-                    }
-                    Text("current IP \(ipAdress)")
-                    Button("SendIpAdress"){
-                    
-                }
-                
-                    
-                    
-                }
-                
-                
             }
         )
         
