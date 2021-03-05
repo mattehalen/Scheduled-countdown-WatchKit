@@ -11,6 +11,60 @@ import UIKit
 import SocketIO
 import UserNotifications
 
+func makeGetCall() {
+  // Set up the URL request
+  let todoEndpoint: String = "https://192.168.8.138/"
+  guard let url = URL(string: todoEndpoint) else {
+    print("Error: cannot create URL")
+    return
+  }
+  let urlRequest = URLRequest(url: url)
+
+  // set up the session
+  let config = URLSessionConfiguration.default
+  let session = URLSession(configuration: config)
+
+  // make the request
+  let task = session.dataTask(with: urlRequest) {
+    (data, response, error) in
+    // check for any errors
+    guard error == nil else {
+      print("error calling GET on /todos/1")
+      print(error!)
+      return
+    }
+    // make sure we got data
+    guard let responseData = data else {
+      print("Error: did not receive data")
+      return
+    }
+    // parse the result as JSON, since that's what the API provides
+    do {
+      guard let todo = try JSONSerialization.jsonObject(with: responseData, options: [])
+        as? [String: Any] else {
+          print("error trying to convert data to JSON")
+          return
+      }
+      // now we have the todo
+      // let's just print it to prove we can access it
+      print("The todo is: " + todo.description)
+
+      // the todo object is a dictionary
+      // so we just access the title using the "title" key
+      // so check for a title and print it if we have one
+      guard let todoTitle = todo["title"] as? String else {
+        print("Could not get todo title from JSON")
+        return
+      }
+      print("The title is: " + todoTitle)
+    } catch  {
+      print("error trying to convert data to JSON")
+      return
+    }
+  }
+  task.resume()
+}
+
 func hexStringToUIColor (hex:String) -> UIColor {
     var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
@@ -32,9 +86,8 @@ func hexStringToUIColor (hex:String) -> UIColor {
         alpha: CGFloat(1.0)
     )
 }
+
 final class Service: ObservableObject{
-    
-    
         
     @Published var currentTime = ""
     @Published var title = ""
@@ -48,13 +101,23 @@ final class Service: ObservableObject{
     @Published var default_notification_setting = true
     
     let defaults = UserDefaults.init(suiteName: "group.com.Scheduled-countdown.settings")
+    
     lazy var default_ip = defaults?.string(forKey: "ip_adress") ?? "Nothing"
     lazy var ipString : String = "http://\(default_ip):3000"
     lazy var  manager = SocketManager(socketURL: URL(string: ipString)!, config: [.log(false),.compress,.path("/ws")])
 
     init(){
         print(default_ip)
+        //print(makeGetCall())
+//        defaults?.addObserver(self as! NSObject, forKeyPath: "ip_adress", options: NSKeyValueObservingOptions.new, context: nil)
+//        func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//             
+//         // do your stuff here
+//            print("mathias")
+//        }
         let default_notification = defaults?.bool(forKey: "use_notifications")
+        
+
         
         if(default_notification == true){
             self.default_notification_setting = true
@@ -104,7 +167,6 @@ final class Service: ObservableObject{
                     
                     //----------
                     
-                    
                     if socketType == "currentTime"{
                         let socketMessage = getSocket[0]["message"]
                         DispatchQueue.main.async {
@@ -125,7 +187,7 @@ final class Service: ObservableObject{
                         var socketCountDownInMs = -1000000
                         if socketObj!["countDownTimeInMS"] as? Int != nil {
                             socketCountDownInMs = socketObj!["countDownTimeInMS"] as! Int
-                            mathiashalen(countdown: socketCountDownInMs)
+                            localNotis(countdown: socketCountDownInMs)
                         }else{
                         }
                         
@@ -176,7 +238,7 @@ final class Service: ObservableObject{
     }
 }
 
-func mathiashalen(countdown:Int) -> Int {
+func localNotis(countdown:Int) -> Int {
     
     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
 
