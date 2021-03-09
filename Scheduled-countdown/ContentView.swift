@@ -8,10 +8,24 @@
 
 import SwiftUI
 
+final class Print: ObservableObject{
+    var number = Int.random(in: 0..<100)
+    @Published var debug_number = ""
+
+    
+    init() {
+        self.debug_number = String(number)
+        print("----------> IOS")
+    }
+}
+
+
 struct ContentView: View {
+    @ObservedObject var myPrint = Print()
+
     var body: some View {
         VStack{
-            Text("Hello, World! - iPhone Test 3")
+            Text("debug_number \(myPrint.debug_number)")
         }
     }
 }

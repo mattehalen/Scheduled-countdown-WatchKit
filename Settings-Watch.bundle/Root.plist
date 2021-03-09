@@ -26,6 +26,24 @@
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Debug</string>
+			<key>Key</key>
+			<string>debug</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>debug_version</string>
+			<key>Key</key>
+			<string>debug_version</string>
+		</dict>
 	</array>
 	<key>ApplicationGroupContainerIdentifier</key>
 	<string>group.com.Scheduled-countdown.settings</string>

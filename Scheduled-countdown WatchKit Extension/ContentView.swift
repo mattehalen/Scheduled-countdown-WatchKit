@@ -11,60 +11,6 @@ import UIKit
 import SocketIO
 import UserNotifications
 
-func makeGetCall() {
-  // Set up the URL request
-  let todoEndpoint: String = "https://192.168.8.138/"
-  guard let url = URL(string: todoEndpoint) else {
-    print("Error: cannot create URL")
-    return
-  }
-  let urlRequest = URLRequest(url: url)
-
-  // set up the session
-  let config = URLSessionConfiguration.default
-  let session = URLSession(configuration: config)
-
-  // make the request
-  let task = session.dataTask(with: urlRequest) {
-    (data, response, error) in
-    // check for any errors
-    guard error == nil else {
-      print("error calling GET on /todos/1")
-      print(error!)
-      return
-    }
-    // make sure we got data
-    guard let responseData = data else {
-      print("Error: did not receive data")
-      return
-    }
-    // parse the result as JSON, since that's what the API provides
-    do {
-      guard let todo = try JSONSerialization.jsonObject(with: responseData, options: [])
-        as? [String: Any] else {
-          print("error trying to convert data to JSON")
-          return
-      }
-      // now we have the todo
-      // let's just print it to prove we can access it
-      print("The todo is: " + todo.description)
-
-      // the todo object is a dictionary
-      // so we just access the title using the "title" key
-      // so check for a title and print it if we have one
-      guard let todoTitle = todo["title"] as? String else {
-        print("Could not get todo title from JSON")
-        return
-      }
-      print("The title is: " + todoTitle)
-    } catch  {
-      print("error trying to convert data to JSON")
-      return
-    }
-  }
-  task.resume()
-}
-
 func hexStringToUIColor (hex:String) -> UIColor {
     var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
@@ -99,6 +45,8 @@ final class Service: ObservableObject{
     @Published var connected = false
     @Published var default_ip_setting = ""
     @Published var default_notification_setting = true
+    @Published var default_debug_setting = false
+    @Published var default_debug_var1 = ""
     
     let defaults = UserDefaults.init(suiteName: "group.com.Scheduled-countdown.settings")
     
@@ -108,17 +56,8 @@ final class Service: ObservableObject{
 
     init(){
         print(default_ip)
-        //print(makeGetCall())
-//        defaults?.addObserver(self as! NSObject, forKeyPath: "ip_adress", options: NSKeyValueObservingOptions.new, context: nil)
-//        func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-//             
-//         // do your stuff here
-//            print("mathias")
-//        }
-        let default_notification = defaults?.bool(forKey: "use_notifications")
         
-
-        
+        let default_notification    = defaults?.bool(forKey: "use_notifications")
         if(default_notification == true){
             self.default_notification_setting = true
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
@@ -132,6 +71,14 @@ final class Service: ObservableObject{
         }else if(default_notification == false){
             self.default_notification_setting = false
         }
+
+        let default_debug = defaults?.bool(forKey: "debug")
+        if(default_debug == true){
+            self.default_debug_setting = true
+        }else if(default_debug == false){
+            self.default_debug_setting = false
+        }
+
         self.default_ip_setting = String(default_ip)
 
         let socket = manager.defaultSocket
@@ -147,26 +94,6 @@ final class Service: ObservableObject{
         socket.on("message"){ [weak self] (data,ack) in
             if let getSocket = data as? [[String:Any]]{
                 if let socketType = getSocket[0]["type"] as? String {
-                    
-                    //---------- NOTIFICATIONS
-                    let center = UNUserNotificationCenter.current()
-                    center.removeAllDeliveredNotifications() // To remove all delivered notifications
-                    center.removeAllPendingNotificationRequests()
-                    
-                    //---- 5min
-                    let content_five = UNMutableNotificationContent()
-                    content_five.title = "5min"
-                    //content_five.subtitle = ""
-                    content_five.sound = UNNotificationSound.default
-
-                    let trigger_five = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-                    let request_five = UNNotificationRequest(identifier: UUID().uuidString, content: content_five, trigger: trigger_five)
-
-                    // add our notification request
-                    UNUserNotificationCenter.current().add(request_five)
-                    
-                    //----------
-                    
                     if socketType == "currentTime"{
                         let socketMessage = getSocket[0]["message"]
                         DispatchQueue.main.async {
@@ -187,7 +114,24 @@ final class Service: ObservableObject{
                         var socketCountDownInMs = -1000000
                         if socketObj!["countDownTimeInMS"] as? Int != nil {
                             socketCountDownInMs = socketObj!["countDownTimeInMS"] as! Int
-                            localNotis(countdown: socketCountDownInMs)
+                            //localNotis(countdown: socketCountDownInMs)
+                            
+                            //---------- Local UNUserNotificationCenter
+                            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                            let fiveMin     = ((socketCountDownInMs/1000)+(5*60)) * -1
+                            if(fiveMin > 0){
+                                self?.default_debug_var1 = String(fiveMin)
+                                
+                                let content_five = UNMutableNotificationContent()
+                                content_five.title = "5 min"
+                                content_five.subtitle = ""
+                                content_five.sound = UNNotificationSound.default
+                                let trigger_five = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(fiveMin), repeats: false)
+                                let request_five = UNNotificationRequest(identifier: UUID().uuidString, content: content_five, trigger: trigger_five)
+                                UNUserNotificationCenter.current().add(request_five)
+                                
+                            }
+                            //--------------------------------------------------
                         }else{
                         }
                         
@@ -239,14 +183,13 @@ final class Service: ObservableObject{
 }
 
 func localNotis(countdown:Int) -> Int {
-    
     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
 
-    let fiveMin     = ((countdown + (5*60000)) / 1000) * -1
-    let fourMin     = ((countdown + (4*60000)) / 1000) * -1
-    let threeMin    = ((countdown + (3*60000)) / 1000) * -1
-    let twoMin      = ((countdown + (2*60000)) / 1000) * -1
-    let oneMin      = ((countdown + (1*60000)) / 1000) * -1
+    let fiveMin     = ((countdown + (5*60)) / 1000) * -1
+    let fourMin     = ((countdown + (4*60)) / 1000) * -1
+    let threeMin    = ((countdown + (3*60)) / 1000) * -1
+    let twoMin      = ((countdown + (2*60)) / 1000) * -1
+    let oneMin      = ((countdown + (1*60)) / 1000) * -1
     
     //---------- 5min
     if(fiveMin > 0){
@@ -307,6 +250,7 @@ struct ContentView: View {
     @ObservedObject var service = Service()
     @State var ipAdress: String = ""
     var ipText = UserDefaults.standard.object(forKey: "ipAdress")
+    @State var var1: String = "Start"
 
     var body: some View {
         Color.init(hexStringToUIColor(hex: service.bgColor)).edgesIgnoringSafeArea(.all)
@@ -316,14 +260,19 @@ struct ContentView: View {
         )
         .overlay(
             VStack{
-                Text(service.default_ip_setting)
-                Text(String(service.default_notification_setting))
-                    if(service.countDownBool){
-                        Text(service.title).font(.subheadline)
-                        Text(service.time).fontWeight(.heavy).font(.title)
-                    }else{
-                        Text(service.currentTime).fontWeight(.heavy).font(.largeTitle)
-                    }
+                if(service.default_debug_setting){
+                    Text(service.default_ip_setting)
+                    Text(service.default_debug_var1)
+                    //Text(String(service.default_notification_setting))
+                    //Text(String(service.default_debug_setting))
+                    Text(var1)
+                }
+                if(service.countDownBool){
+                    Text(service.title).font(.subheadline)
+                    Text(service.time).fontWeight(.heavy).font(.title)
+                }else{
+                    Text(service.currentTime).fontWeight(.heavy).font(.largeTitle)
+                }
             }
         )
         
