@@ -1,0 +1,404 @@
+2021-03-09 10:49:16 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fb53d5dc7b0; archive(resolved)='<IDEArchive: 0x7fb539ac0c70>', distributionTask(resolved)='2', distributionDestination(resolved)='1', distributionMethod(resolved)='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team(resolved)='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb53aa45080; teamID='F8993Q6N82', teamName='Mathias Halen', teamType='Individual', username='matte_halen@hotmail.com', isFreeProvisioningTeam='0'>'>
+	Chain (12, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fb53d5dc7b0; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb53aa45080; teamID='F8993Q6N82', teamName='Mathias Halen', teamType='Individual', username='matte_halen@hotmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7fb53d625260; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb53aa45080; teamID='F8993Q6N82', teamName='Mathias Halen', teamType='Individual', username='matte_halen@hotmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb53e774130; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb53aa45080; teamID='F8993Q6N82', teamName='Mathias Halen', teamType='Individual', username='matte_halen@hotmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb53b9b3a10; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb53aa45080; teamID='F8993Q6N82', teamName='Mathias Halen', teamType='Individual', username='matte_halen@hotmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb53c875590; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb53aa45080; teamID='F8993Q6N82', teamName='Mathias Halen', teamType='Individual', username='matte_halen@hotmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb53d998c80; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb53aa45080; teamID='F8993Q6N82', teamName='Mathias Halen', teamType='Individual', username='matte_halen@hotmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb53e75cde0; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb53aa45080; teamID='F8993Q6N82', teamName='Mathias Halen', teamType='Individual', username='matte_halen@hotmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb53e1e6e00; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb53aa45080; teamID='F8993Q6N82', teamName='Mathias Halen', teamType='Individual', username='matte_halen@hotmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb53e7855b0; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb53aa45080; teamID='F8993Q6N82', teamName='Mathias Halen', teamType='Individual', username='matte_halen@hotmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb53e71ea70; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team='(null)'>
+	<IDEDistributionContext: 0x7fb53de122e0; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fb53a9838c0>', team='(null)'>
+	<IDEDistributionContext: 0x7fb53e671220; archive = '<IDEArchive: 0x7fb539ac0c70>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7fb53d5dc7b0>
+2021-03-09 10:49:16 +0000  Processing step: IDEDistributionCreateDestRootStep
+2021-03-09 10:49:16 +0000  Processing step: IDEDistributionCopyItemStep
+2021-03-09 10:49:16 +0000  Running /usr/bin/ditto '-V' '/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app'
+2021-03-09 10:49:16 +0000  >>> Copying /Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app 
+2021-03-09 10:49:16 +0000  copying file ./_CodeSignature/CodeResources ... 
+2021-03-09 10:49:16 +0000  9482 bytes for ./_CodeSignature/CodeResources
+2021-03-09 10:49:16 +0000  copying file ./AppIcon60x60@2x.png ... 
+2021-03-09 10:49:16 +0000  7663 bytes for ./AppIcon60x60@2x.png
+2021-03-09 10:49:16 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2021-03-09 10:49:16 +0000  1197 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2021-03-09 10:49:16 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+896 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Settings-Watch.bundle/en.lproj/Root.strings ... 
+546 bytes for ./Settings-Watch.bundle/en.lproj/Root.strings
+copying file ./Settings-Watch.bundle/Root.plist ... 
+2021-03-09 10:49:16 +0000  1247 bytes for ./Settings-Watch.bundle/Root.plist
+2021-03-09 10:49:16 +0000  copying file ./Assets.car ... 
+2021-03-09 10:49:16 +0000  142296 bytes for ./Assets.car
+2021-03-09 10:49:16 +0000  copying file ./AppIcon76x76@2x~ipad.png ... 
+2021-03-09 10:49:16 +0000  8270 bytes for ./AppIcon76x76@2x~ipad.png
+2021-03-09 10:49:16 +0000  copying file ./Scheduled-countdown ... 
+2021-03-09 10:49:16 +0000  3056336 bytes for ./Scheduled-countdown
+2021-03-09 10:49:16 +0000  copying file ./Watch/Scheduled-countdown WatchKit App.app/_CodeSignature/CodeResources ... 
+2021-03-09 10:49:16 +0000  5437 bytes for ./Watch/Scheduled-countdown WatchKit App.app/_CodeSignature/CodeResources
+2021-03-09 10:49:16 +0000  copying file ./Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/_CodeSignature/CodeResources ... 
+2390 bytes for ./Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/_CodeSignature/CodeResources
+copying file ./Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Assets.car ... 
+2021-03-09 10:49:16 +0000  255471 bytes for ./Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Assets.car
+2021-03-09 10:49:16 +0000  copying file ./Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Scheduled-countdown WatchKit Extension ... 
+2021-03-09 10:49:16 +0000  6726624 bytes for ./Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Scheduled-countdown WatchKit Extension
+2021-03-09 10:49:16 +0000  copying file ./Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/embedded.mobileprovision ... 
+2021-03-09 10:49:16 +0000  9762 bytes for ./Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/embedded.mobileprovision
+copying file ./Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Info.plist ... 
+2021-03-09 10:49:16 +0000  1753 bytes for ./Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Info.plist
+2021-03-09 10:49:16 +0000  copying file ./Watch/Scheduled-countdown WatchKit App.app/Base.lproj/Interface.plist ... 
+2021-03-09 10:49:16 +0000  209 bytes for ./Watch/Scheduled-countdown WatchKit App.app/Base.lproj/Interface.plist
+2021-03-09 10:49:16 +0000  copying file ./Watch/Scheduled-countdown WatchKit App.app/Base.lproj/Interface-notification.plist ... 
+2021-03-09 10:49:16 +0000  398 bytes for ./Watch/Scheduled-countdown WatchKit App.app/Base.lproj/Interface-notification.plist
+2021-03-09 10:49:16 +0000  copying file ./Watch/Scheduled-countdown WatchKit App.app/Assets.car ... 
+2021-03-09 10:49:16 +0000  119176 bytes for ./Watch/Scheduled-countdown WatchKit App.app/Assets.car
+2021-03-09 10:49:16 +0000  copying file ./Watch/Scheduled-countdown WatchKit App.app/Scheduled-countdown WatchKit App ... 
+134832 bytes for ./Watch/Scheduled-countdown WatchKit App.app/Scheduled-countdown WatchKit App
+copying file ./Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK ... 
+133920 bytes for ./Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK
+copying file ./Watch/Scheduled-countdown WatchKit App.app/embedded.mobileprovision ... 
+9472 bytes for ./Watch/Scheduled-countdown WatchKit App.app/embedded.mobileprovision
+copying file ./Watch/Scheduled-countdown WatchKit App.app/Info.plist ... 
+1253 bytes for ./Watch/Scheduled-countdown WatchKit App.app/Info.plist
+copying file ./Watch/Scheduled-countdown WatchKit App.app/PkgInfo ... 
+8 bytes for ./Watch/Scheduled-countdown WatchKit App.app/PkgInfo
+copying file ./embedded.mobileprovision ... 
+9472 bytes for ./embedded.mobileprovision
+copying file ./Info.plist ... 
+1564 bytes for ./Info.plist
+copying file ./PkgInfo ... 
+2021-03-09 10:49:16 +0000  8 bytes for ./PkgInfo
+2021-03-09 10:49:16 +0000  /usr/bin/ditto exited with 0
+2021-03-09 10:49:16 +0000  Processing step: IDEDistributionEmbedProfileStep
+2021-03-09 10:49:16 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fb53bc26cb0; bundleID='(null)', path='<DVTFilePath:0x7fb53e3169a0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53cada3a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53e738c70; name='Software Signing', hash='013E2787748A74103D62D2CDBF77A1345517C482', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53ca98bd0>', certificateKinds='(
+), issueDate='2013-04-12 22:34:35 +0000''>', entitlements='(null)', teamID='(null)', identifier='com.apple.WK', executablePath='<DVTFilePath:0x7fb53e3169a0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK'>', hardenedRuntime='0'>'>
+2021-03-09 10:49:16 +0000  Processing step: IDEDistributionInfoPlistStep
+2021-03-09 10:49:16 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-09 10:49:16 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-09 10:49:16 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-09 10:49:16 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-09 10:49:17 +0000  Processing step: IDEDistributionItemRemovalStep
+2021-03-09 10:49:17 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2021-03-09 10:49:17 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2021-03-09 10:49:17 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2021-03-09 10:49:17 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2021-03-09 10:49:17 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2021-03-09 10:49:17 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Scheduled-countdown WatchKit Extension' '-l' '-o' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Scheduled-countdown WatchKit Extension'
+2021-03-09 10:49:17 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-09 10:49:17 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Scheduled-countdown' '-l' '-o' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Scheduled-countdown'
+2021-03-09 10:49:17 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-09 10:49:17 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2021-03-09 10:49:17 +0000  Running /usr/bin/ditto '-V' '/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/BCSymbolMaps/7447B60E-996A-3181-B0D3-5FC64DB8230D.bcsymbolmap' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/BCSymbolMaps/7447B60E-996A-3181-B0D3-5FC64DB8230D.bcsymbolmap'
+2021-03-09 10:49:17 +0000  >>> Copying /Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/BCSymbolMaps/7447B60E-996A-3181-B0D3-5FC64DB8230D.bcsymbolmap 
+2021-03-09 10:49:17 +0000  copying file ./7447B60E-996A-3181-B0D3-5FC64DB8230D.bcsymbolmap ... 
+2021-03-09 10:49:17 +0000  211297 bytes for ./7447B60E-996A-3181-B0D3-5FC64DB8230D.bcsymbolmap
+2021-03-09 10:49:17 +0000  /usr/bin/ditto exited with 0
+2021-03-09 10:49:17 +0000  Running /usr/bin/ditto '-V' '/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/BCSymbolMaps/4643B403-9A5C-36CB-8826-0A5079E44FA2.bcsymbolmap' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/BCSymbolMaps/4643B403-9A5C-36CB-8826-0A5079E44FA2.bcsymbolmap'
+2021-03-09 10:49:17 +0000  >>> Copying /Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/BCSymbolMaps/4643B403-9A5C-36CB-8826-0A5079E44FA2.bcsymbolmap 
+2021-03-09 10:49:17 +0000  copying file ./4643B403-9A5C-36CB-8826-0A5079E44FA2.bcsymbolmap ... 
+2021-03-09 10:49:17 +0000  206554 bytes for ./4643B403-9A5C-36CB-8826-0A5079E44FA2.bcsymbolmap
+2021-03-09 10:49:17 +0000  /usr/bin/ditto exited with 0
+2021-03-09 10:49:17 +0000  Running /usr/bin/ditto '-V' '/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/BCSymbolMaps/3DB3CD25-9A5E-348E-867D-D9C81A8D073A.bcsymbolmap' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/BCSymbolMaps/3DB3CD25-9A5E-348E-867D-D9C81A8D073A.bcsymbolmap'
+2021-03-09 10:49:17 +0000  >>> Copying /Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/BCSymbolMaps/3DB3CD25-9A5E-348E-867D-D9C81A8D073A.bcsymbolmap 
+2021-03-09 10:49:17 +0000  copying file ./3DB3CD25-9A5E-348E-867D-D9C81A8D073A.bcsymbolmap ... 
+2021-03-09 10:49:17 +0000  170126 bytes for ./3DB3CD25-9A5E-348E-867D-D9C81A8D073A.bcsymbolmap
+2021-03-09 10:49:17 +0000  /usr/bin/ditto exited with 0
+2021-03-09 10:49:17 +0000  Processing step: IDEDistributionSymbolsStep
+2021-03-09 10:49:17 +0000  Excluding symbols for Scheduled-countdown WatchKit Extension.appex
+2021-03-09 10:49:17 +0000  Excluding symbols for WK
+2021-03-09 10:49:17 +0000  Excluding symbols for Scheduled-countdown WatchKit App.app
+2021-03-09 10:49:17 +0000  Excluding symbols for Scheduled-countdown.app
+2021-03-09 10:49:17 +0000  Processing step: IDEDistributionCopyAppleProvidedContentStep
+2021-03-09 10:49:17 +0000  Running /usr/bin/ditto '-V' '/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/WatchKitSupport2' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/WatchKitSupport2'
+2021-03-09 10:49:17 +0000  >>> Copying /Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/WatchKitSupport2 
+2021-03-09 10:49:17 +0000  copying file ./WK ... 
+143544 bytes for ./WK
+2021-03-09 10:49:17 +0000  /usr/bin/ditto exited with 0
+2021-03-09 10:49:17 +0000  Processing step: IDEDistributionAppThinningStep
+2021-03-09 10:49:17 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2021-03-09 10:49:17 +0000  Processing step: IDEDistributionArchThinningStep
+2021-03-09 10:49:17 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Scheduled-countdown WatchKit Extension' '-verify_arch' 'arm64e'
+2021-03-09 10:49:17 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-03-09 10:49:17 +0000  Skipping architecture thinning for item "Scheduled-countdown WatchKit Extension" because arch "arm64e" wasn't found
+2021-03-09 10:49:17 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK' '-verify_arch' 'arm64e'
+2021-03-09 10:49:17 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-03-09 10:49:17 +0000  Skipping architecture thinning for item "WK" because arch "arm64e" wasn't found
+2021-03-09 10:49:17 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Scheduled-countdown WatchKit App' '-verify_arch' 'arm64e'
+2021-03-09 10:49:17 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-03-09 10:49:17 +0000  Skipping architecture thinning for item "Scheduled-countdown WatchKit App" because arch "arm64e" wasn't found
+2021-03-09 10:49:17 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Scheduled-countdown' '-verify_arch' 'arm64e'
+2021-03-09 10:49:17 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-03-09 10:49:17 +0000  Skipping architecture thinning for item "Scheduled-countdown" because arch "arm64e" wasn't found
+2021-03-09 10:49:17 +0000  Processing step: IDEDistributionODRStep
+2021-03-09 10:49:17 +0000  Processing step: IDEDistributionStripXattrsStep
+2021-03-09 10:49:17 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fb53bce17f0; bundleID='com.Scheduled-countdown.watchkitapp.watchkitextension', path='<DVTFilePath:0x7fb55636b9d0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53eb852c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53ebbe2e0; name='Apple Development: Mathias Halen (R54DSM4AB8)', hash='D3911510B5959ADAA50BCE44A966BF1C0C8DFEC7', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53969e9f0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-02-25 13:55:17 +0000''>', entitlements='{
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp.watchkitextension";
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "com.apple.security.application-groups" =     (
+        "group.com.Scheduled-countdown.settings"
+    );
+    "get-task-allow" = 1;
+}', teamID='F8993Q6N82', identifier='com.Scheduled-countdown.watchkitapp.watchkitextension', executablePath='<DVTFilePath:0x7fb53dfe37c0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Scheduled-countdown WatchKit Extension'>', hardenedRuntime='0'>'>
+2021-03-09 10:49:17 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fb53bc26cb0; bundleID='(null)', path='<DVTFilePath:0x7fb53e3169a0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53cada3a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53cadef90; name='Software Signing', hash='013E2787748A74103D62D2CDBF77A1345517C482', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53ca1f250>', certificateKinds='(
+), issueDate='2013-04-12 22:34:35 +0000''>', entitlements='(null)', teamID='(null)', identifier='com.apple.WK', executablePath='<DVTFilePath:0x7fb53e3169a0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK'>', hardenedRuntime='0'>'>
+2021-03-09 10:49:17 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fb539fc0b60; bundleID='com.Scheduled-countdown.watchkitapp', path='<DVTFilePath:0x7fb53cce2030:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53eb81580; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53cadef90; name='Apple Development: Mathias Halen (R54DSM4AB8)', hash='D3911510B5959ADAA50BCE44A966BF1C0C8DFEC7', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53c9318f0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-02-25 13:55:17 +0000''>', entitlements='{
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp";
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "F8993Q6N82.com.Scheduled-countdown.watchkitapp"
+    );
+}', teamID='F8993Q6N82', identifier='com.Scheduled-countdown.watchkitapp', executablePath='<DVTFilePath:0x7fb556af0090:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Scheduled-countdown WatchKit App'>', hardenedRuntime='0'>'>
+2021-03-09 10:49:17 +0000  Running /usr/bin/xattr '-crs' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app'
+2021-03-09 10:49:19 +0000  /usr/bin/xattr exited with 0
+2021-03-09 10:49:19 +0000  Processing step: IDEDistributionCodesignStep
+2021-03-09 10:49:19 +0000  Entitlements for <IDEDistributionItem: 0x7fb53bce17f0; bundleID='com.Scheduled-countdown.watchkitapp.watchkitextension', path='<DVTFilePath:0x7fb55636b9d0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53eb852c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53ebbe2e0; name='Apple Development: Mathias Halen (R54DSM4AB8)', hash='D3911510B5959ADAA50BCE44A966BF1C0C8DFEC7', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb551cc4ae0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-02-25 13:55:17 +0000''>', entitlements='{
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp.watchkitextension";
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "com.apple.security.application-groups" =     (
+        "group.com.Scheduled-countdown.settings"
+    );
+    "get-task-allow" = 1;
+}', teamID='F8993Q6N82', identifier='com.Scheduled-countdown.watchkitapp.watchkitextension', executablePath='<DVTFilePath:0x7fb53dfe37c0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Scheduled-countdown WatchKit Extension'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp.watchkitextension";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "com.apple.security.application-groups" =     (
+        "group.com.Scheduled-countdown.settings"
+    );
+    "get-task-allow" = 0;
+}
+2021-03-09 10:49:19 +0000  Entitlements for <IDEDistributionItem: 0x7fb53bce17f0; bundleID='com.Scheduled-countdown.watchkitapp.watchkitextension', path='<DVTFilePath:0x7fb55636b9d0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53eb852c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53e755560; name='Apple Development: Mathias Halen (R54DSM4AB8)', hash='D3911510B5959ADAA50BCE44A966BF1C0C8DFEC7', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53ca6e5c0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-02-25 13:55:17 +0000''>', entitlements='{
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp.watchkitextension";
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "com.apple.security.application-groups" =     (
+        "group.com.Scheduled-countdown.settings"
+    );
+    "get-task-allow" = 1;
+}', teamID='F8993Q6N82', identifier='com.Scheduled-countdown.watchkitapp.watchkitextension', executablePath='<DVTFilePath:0x7fb53dfe37c0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Scheduled-countdown WatchKit Extension'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp.watchkitextension";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "com.apple.security.application-groups" =     (
+        "group.com.Scheduled-countdown.settings"
+    );
+    "get-task-allow" = 0;
+}
+2021-03-09 10:49:19 +0000  Writing entitlements for <IDEDistributionItem: 0x7fb53bce17f0; bundleID='com.Scheduled-countdown.watchkitapp.watchkitextension', path='<DVTFilePath:0x7fb55636b9d0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53eb852c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb5561c49c0; name='Apple Development: Mathias Halen (R54DSM4AB8)', hash='D3911510B5959ADAA50BCE44A966BF1C0C8DFEC7', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53eb74e00>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-02-25 13:55:17 +0000''>', entitlements='{
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp.watchkitextension";
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "com.apple.security.application-groups" =     (
+        "group.com.Scheduled-countdown.settings"
+    );
+    "get-task-allow" = 1;
+}', teamID='F8993Q6N82', identifier='com.Scheduled-countdown.watchkitapp.watchkitextension', executablePath='<DVTFilePath:0x7fb53dfe37c0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Scheduled-countdown WatchKit Extension'>', hardenedRuntime='0'>'> to: /var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/entitlements~~~Bb8vCh
+2021-03-09 10:49:19 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E897A6AE1231C362118ADF414620B34BA14E88F1' '--entitlements' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/entitlements~~~Bb8vCh' '--preserve-metadata=identifier,flags,runtime' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex'
+2021-03-09 10:49:19 +0000  /var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex: signed bundle with Mach-O universal (armv7k arm64_32) [com.Scheduled-countdown.watchkitapp.watchkitextension]
+2021-03-09 10:49:19 +0000  /usr/bin/codesign exited with 0
+2021-03-09 10:49:19 +0000  Skipping signing of item: <IDEDistributionItem: 0x7fb53bc26cb0; bundleID='(null)', path='<DVTFilePath:0x7fb53e3169a0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53cada3a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53cadef90; name='Software Signing', hash='013E2787748A74103D62D2CDBF77A1345517C482', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53ca814d0>', certificateKinds='(
+), issueDate='2013-04-12 22:34:35 +0000''>', entitlements='(null)', teamID='(null)', identifier='com.apple.WK', executablePath='<DVTFilePath:0x7fb53e3169a0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK'>', hardenedRuntime='0'>'>
+2021-03-09 10:49:19 +0000  Entitlements for <IDEDistributionItem: 0x7fb539fc0b60; bundleID='com.Scheduled-countdown.watchkitapp', path='<DVTFilePath:0x7fb53cce2030:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53eb81580; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53e7ab690; name='Apple Development: Mathias Halen (R54DSM4AB8)', hash='D3911510B5959ADAA50BCE44A966BF1C0C8DFEC7', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53ca97a80>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-02-25 13:55:17 +0000''>', entitlements='{
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp";
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "F8993Q6N82.com.Scheduled-countdown.watchkitapp"
+    );
+}', teamID='F8993Q6N82', identifier='com.Scheduled-countdown.watchkitapp', executablePath='<DVTFilePath:0x7fb556af0090:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Scheduled-countdown WatchKit App'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "F8993Q6N82.com.Scheduled-countdown.watchkitapp"
+    );
+}
+2021-03-09 10:49:19 +0000  Entitlements for <IDEDistributionItem: 0x7fb539fc0b60; bundleID='com.Scheduled-countdown.watchkitapp', path='<DVTFilePath:0x7fb53cce2030:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53eb81580; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53e711460; name='Apple Development: Mathias Halen (R54DSM4AB8)', hash='D3911510B5959ADAA50BCE44A966BF1C0C8DFEC7', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53b994e00>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-02-25 13:55:17 +0000''>', entitlements='{
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp";
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "F8993Q6N82.com.Scheduled-countdown.watchkitapp"
+    );
+}', teamID='F8993Q6N82', identifier='com.Scheduled-countdown.watchkitapp', executablePath='<DVTFilePath:0x7fb556af0090:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Scheduled-countdown WatchKit App'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "F8993Q6N82.com.Scheduled-countdown.watchkitapp"
+    );
+}
+2021-03-09 10:49:19 +0000  Writing entitlements for <IDEDistributionItem: 0x7fb539fc0b60; bundleID='com.Scheduled-countdown.watchkitapp', path='<DVTFilePath:0x7fb53cce2030:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53eb81580; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53d96f560; name='Apple Development: Mathias Halen (R54DSM4AB8)', hash='D3911510B5959ADAA50BCE44A966BF1C0C8DFEC7', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53e42e140>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-02-25 13:55:17 +0000''>', entitlements='{
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown.watchkitapp";
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "F8993Q6N82.com.Scheduled-countdown.watchkitapp"
+    );
+}', teamID='F8993Q6N82', identifier='com.Scheduled-countdown.watchkitapp', executablePath='<DVTFilePath:0x7fb556af0090:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Scheduled-countdown WatchKit App'>', hardenedRuntime='0'>'> to: /var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/entitlements~~~L1o0h7
+2021-03-09 10:49:19 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E897A6AE1231C362118ADF414620B34BA14E88F1' '--entitlements' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/entitlements~~~L1o0h7' '--preserve-metadata=identifier,flags,runtime' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app'
+2021-03-09 10:49:19 +0000  /var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app: replacing existing signature
+2021-03-09 10:49:19 +0000  /var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app: signed app bundle with Mach-O universal (armv7k arm64_32) [com.Scheduled-countdown.watchkitapp]
+2021-03-09 10:49:19 +0000  /usr/bin/codesign exited with 0
+2021-03-09 10:49:19 +0000  Entitlements for <IDEDistributionItem: 0x7fb53e38df80; bundleID='com.Scheduled-countdown', path='<DVTFilePath:0x7fb53e624fc0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53e7a24d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53ebef780; name='Apple Development: Mathias Halen (R54DSM4AB8)', hash='D3911510B5959ADAA50BCE44A966BF1C0C8DFEC7', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb551c663f0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-02-25 13:55:17 +0000''>', entitlements='{
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown";
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "F8993Q6N82.com.Scheduled-countdown"
+    );
+}', teamID='F8993Q6N82', identifier='com.Scheduled-countdown', executablePath='<DVTFilePath:0x7fb53de71ed0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Scheduled-countdown'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "F8993Q6N82.com.Scheduled-countdown"
+    );
+}
+2021-03-09 10:49:19 +0000  Entitlements for <IDEDistributionItem: 0x7fb53e38df80; bundleID='com.Scheduled-countdown', path='<DVTFilePath:0x7fb53e624fc0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53e7a24d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53d97ef30; name='Apple Development: Mathias Halen (R54DSM4AB8)', hash='D3911510B5959ADAA50BCE44A966BF1C0C8DFEC7', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53c931130>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-02-25 13:55:17 +0000''>', entitlements='{
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown";
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "F8993Q6N82.com.Scheduled-countdown"
+    );
+}', teamID='F8993Q6N82', identifier='com.Scheduled-countdown', executablePath='<DVTFilePath:0x7fb53de71ed0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Scheduled-countdown'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "F8993Q6N82.com.Scheduled-countdown"
+    );
+}
+2021-03-09 10:49:19 +0000  Writing entitlements for <IDEDistributionItem: 0x7fb53e38df80; bundleID='com.Scheduled-countdown', path='<DVTFilePath:0x7fb53e624fc0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb53e7a24d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb53ebe8650; name='Apple Development: Mathias Halen (R54DSM4AB8)', hash='D3911510B5959ADAA50BCE44A966BF1C0C8DFEC7', serialNumber='<DVTSigningCertificateSerialNumber: 0x7fb53ebe8700>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-02-25 13:55:17 +0000''>', entitlements='{
+    "application-identifier" = "F8993Q6N82.com.Scheduled-countdown";
+    "com.apple.developer.team-identifier" = F8993Q6N82;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "F8993Q6N82.com.Scheduled-countdown"
+    );
+}', teamID='F8993Q6N82', identifier='com.Scheduled-countdown', executablePath='<DVTFilePath:0x7fb53de71ed0:'/Users/mathiashalen/Library/Developer/Xcode/Archives/2021-03-09/Scheduled-countdown 2021-03-09, 11.31.xcarchive/Products/Applications/Scheduled-countdown.app/Scheduled-countdown'>', hardenedRuntime='0'>'> to: /var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/entitlements~~~1pw06b
+2021-03-09 10:49:19 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E897A6AE1231C362118ADF414620B34BA14E88F1' '--entitlements' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/entitlements~~~1pw06b' '--preserve-metadata=identifier,flags,runtime' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app'
+2021-03-09 10:49:20 +0000  /var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app: signed app bundle with Mach-O thin (arm64) [com.Scheduled-countdown]
+2021-03-09 10:49:20 +0000  /usr/bin/codesign exited with 0
+2021-03-09 10:49:20 +0000  Processing step: IDEDistributionZipODRItemStep
+2021-03-09 10:49:20 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-09 10:49:20 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-09 10:49:20 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-09 10:49:20 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-09 10:49:20 +0000  Processing step: IDEDistributionCreateIPAStep
+2021-03-09 10:49:20 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root' '/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Packages/Scheduled-countdown.ipa'
+2021-03-09 10:49:20 +0000  >>> Copying /var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root 
+2021-03-09 10:49:20 +0000  copying file ./BCSymbolMaps/4643B403-9A5C-36CB-8826-0A5079E44FA2.bcsymbolmap ... 
+2021-03-09 10:49:20 +0000  206554 bytes for ./BCSymbolMaps/4643B403-9A5C-36CB-8826-0A5079E44FA2.bcsymbolmap
+2021-03-09 10:49:20 +0000  copying file ./BCSymbolMaps/3DB3CD25-9A5E-348E-867D-D9C81A8D073A.bcsymbolmap ... 
+2021-03-09 10:49:20 +0000  170126 bytes for ./BCSymbolMaps/3DB3CD25-9A5E-348E-867D-D9C81A8D073A.bcsymbolmap
+2021-03-09 10:49:20 +0000  copying file ./BCSymbolMaps/7447B60E-996A-3181-B0D3-5FC64DB8230D.bcsymbolmap ... 
+2021-03-09 10:49:20 +0000  211297 bytes for ./BCSymbolMaps/7447B60E-996A-3181-B0D3-5FC64DB8230D.bcsymbolmap
+2021-03-09 10:49:20 +0000  copying file ./Payload/Scheduled-countdown.app/_CodeSignature/CodeResources ... 
+9482 bytes for ./Payload/Scheduled-countdown.app/_CodeSignature/CodeResources
+copying file ./Payload/Scheduled-countdown.app/AppIcon60x60@2x.png ... 
+7663 bytes for ./Payload/Scheduled-countdown.app/AppIcon60x60@2x.png
+copying file ./Payload/Scheduled-countdown.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+1197 bytes for ./Payload/Scheduled-countdown.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Payload/Scheduled-countdown.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+896 bytes for ./Payload/Scheduled-countdown.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/Scheduled-countdown.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+258 bytes for ./Payload/Scheduled-countdown.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Payload/Scheduled-countdown.app/Settings-Watch.bundle/en.lproj/Root.strings ... 
+546 bytes for ./Payload/Scheduled-countdown.app/Settings-Watch.bundle/en.lproj/Root.strings
+2021-03-09 10:49:20 +0000  copying file ./Payload/Scheduled-countdown.app/Settings-Watch.bundle/Root.plist ... 
+2021-03-09 10:49:20 +0000  1247 bytes for ./Payload/Scheduled-countdown.app/Settings-Watch.bundle/Root.plist
+copying file ./Payload/Scheduled-countdown.app/Assets.car ... 
+2021-03-09 10:49:20 +0000  142296 bytes for ./Payload/Scheduled-countdown.app/Assets.car
+2021-03-09 10:49:20 +0000  copying file ./Payload/Scheduled-countdown.app/AppIcon76x76@2x~ipad.png ... 
+8270 bytes for ./Payload/Scheduled-countdown.app/AppIcon76x76@2x~ipad.png
+copying file ./Payload/Scheduled-countdown.app/Scheduled-countdown ... 
+2021-03-09 10:49:20 +0000  2528544 bytes for ./Payload/Scheduled-countdown.app/Scheduled-countdown
+2021-03-09 10:49:20 +0000  copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_CodeSignature/CodeResources ... 
+5437 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_CodeSignature/CodeResources
+copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/_CodeSignature/CodeResources ... 
+2390 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/_CodeSignature/CodeResources
+copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Assets.car ... 
+2021-03-09 10:49:20 +0000  255471 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Assets.car
+2021-03-09 10:49:20 +0000  copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Scheduled-countdown WatchKit Extension ... 
+2021-03-09 10:49:20 +0000  5693984 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Scheduled-countdown WatchKit Extension
+2021-03-09 10:49:20 +0000  copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/embedded.mobileprovision ... 
+7721 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/embedded.mobileprovision
+copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Info.plist ... 
+1753 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex/Info.plist
+copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Base.lproj/Interface.plist ... 
+209 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Base.lproj/Interface.plist
+copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Base.lproj/Interface-notification.plist ... 
+398 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Base.lproj/Interface-notification.plist
+copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Assets.car ... 
+2021-03-09 10:49:20 +0000  119176 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Assets.car
+2021-03-09 10:49:20 +0000  copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Scheduled-countdown WatchKit App ... 
+134864 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Scheduled-countdown WatchKit App
+copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK ... 
+133920 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK
+copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/embedded.mobileprovision ... 
+7526 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/embedded.mobileprovision
+2021-03-09 10:49:20 +0000  copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Info.plist ... 
+2021-03-09 10:49:20 +0000  1253 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/Info.plist
+copying file ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PkgInfo ... 
+2021-03-09 10:49:20 +0000  8 bytes for ./Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PkgInfo
+2021-03-09 10:49:20 +0000  copying file ./Payload/Scheduled-countdown.app/embedded.mobileprovision ... 
+2021-03-09 10:49:20 +0000  7490 bytes for ./Payload/Scheduled-countdown.app/embedded.mobileprovision
+2021-03-09 10:49:20 +0000  copying file ./Payload/Scheduled-countdown.app/Info.plist ... 
+2021-03-09 10:49:20 +0000  1564 bytes for ./Payload/Scheduled-countdown.app/Info.plist
+copying file ./Payload/Scheduled-countdown.app/PkgInfo ... 
+2021-03-09 10:49:20 +0000  8 bytes for ./Payload/Scheduled-countdown.app/PkgInfo
+2021-03-09 10:49:20 +0000  copying file ./WatchKitSupport2/WK ... 
+2021-03-09 10:49:20 +0000  133920 bytes for ./WatchKitSupport2/WK
+2021-03-09 10:49:20 +0000  /usr/bin/ditto exited with 0
+2021-03-09 10:49:20 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2021-03-09 10:49:20 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2021-03-09 10:49:20 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2021-03-09 10:49:20 +0000  IDEDistributionItem init <DVTFilePath:0x7fb53e78da90:'/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK'>
+2021-03-09 10:49:20 +0000  [OPTIONAL] Didn't find info dictionary for <DVTFilePath:0x7fb53e78da90:'/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK'>: Error Domain=DVTFoundationNSBundleAdditionsErrorDomain Code=1 "Couldn't load Info dictionary for <DVTFilePath:0x7fb53e78da90:'/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK'>" UserInfo={NSLocalizedDescription=Couldn't load Info dictionary for <DVTFilePath:0x7fb53e78da90:'/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK'>}
+2021-03-09 10:49:20 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7fb53e78da90:'/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/_WatchKitStub/WK'>
+2021-03-09 10:49:20 +0000  IDEDistributionItem init <DVTFilePath:0x7fb53d5356c0:'/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app/PlugIns/Scheduled-countdown WatchKit Extension.appex'>
+2021-03-09 10:49:20 +0000  IDEDistributionItem init <DVTFilePath:0x7fb53d5187c0:'/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app/Watch/Scheduled-countdown WatchKit App.app'>
+2021-03-09 10:49:20 +0000  IDEDistributionItem init <DVTFilePath:0x7fb53eb96c80:'/var/folders/_c/8fnjx59s52983jg9hx0jnxth0000gn/T/XcodeDistPipeline.~~~9ZyTzY/Root/Payload/Scheduled-countdown.app'>
+2021-03-09 10:49:20 +0000  Processing step: IDEDistributionCreateManifestStep
+2021-03-09 10:49:20 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so
