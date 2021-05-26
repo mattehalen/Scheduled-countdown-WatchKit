@@ -89,6 +89,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		08673DF2265E25D0008EA8D8 /* Scheduled-countdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Scheduled-countdown.entitlements"; sourceTree = "<group>"; };
 		84148FC025EE8C5200CF054F /* Scheduled-countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scheduled-countdown.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84148FC325EE8C5200CF054F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84148FC525EE8C5200CF054F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +186,7 @@
 		84148FC225EE8C5200CF054F /* Scheduled-countdown */ = {
 			isa = PBXGroup;
 			children = (
+				08673DF2265E25D0008EA8D8 /* Scheduled-countdown.entitlements */,
 				84148FC325EE8C5200CF054F /* AppDelegate.swift */,
 				84148FC525EE8C5200CF054F /* SceneDelegate.swift */,
 				84148FC725EE8C5200CF054F /* ContentView.swift */,
@@ -830,6 +832,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Scheduled-countdown/Scheduled-countdown.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
@@ -853,6 +856,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Scheduled-countdown/Scheduled-countdown.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;

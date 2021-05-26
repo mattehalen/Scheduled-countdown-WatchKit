@@ -9,12 +9,13 @@
 import SwiftUI
 
 final class Print: ObservableObject{
+    let BundleVersion = Bundle.main.infoDictionary?["CFBundleVersion"]
     var number = Int.random(in: 0..<100)
     @Published var debug_number = ""
 
     
     init() {
-        self.debug_number = String(number)
+        self.debug_number = BundleVersion as! String
         print("----------> IOS")
     }
 }
