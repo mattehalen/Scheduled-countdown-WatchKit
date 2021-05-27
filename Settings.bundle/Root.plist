@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>ipaddress</string>
+			<key>Key</key>
+			<string>ios_ip_address</string>
+			<key>DefaultValue</key>
+			<string>127.0.0.1</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Debug</string>
+			<key>Key</key>
+			<string>ios_debug</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>debug_version</string>
+			<key>Key</key>
+			<string>ios_debug_version</string>
+		</dict>
+	</array>
+	<key>ApplicationGroupContainerIdentifier</key>
+	<string>group.com.Scheduled-countdown.settings</string>
+</dict>
+</plist>

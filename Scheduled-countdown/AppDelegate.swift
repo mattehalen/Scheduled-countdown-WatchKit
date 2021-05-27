@@ -12,11 +12,23 @@ import SocketIO
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     //-------------------------------
-//    let defaults = UserDefaults.init(suiteName: "group.com.Scheduled-countdown.settings")
-//
-//    lazy var default_ip = defaults?.string(forKey: "ip_adress") ?? "localhost"
-//    lazy var ipString : String = "http://\(default_ip):3000"
-//    lazy var  manager = SocketManager(socketURL: URL(string: ipString)!, config: [.log(false),.compress,.path("/ws")])
+    func registerDefaultsFromSettingsBundle()
+    {
+        let settingsUrl = Bundle.main.url(forResource: "Settings", withExtension: "bundle")!.appendingPathComponent("Root.plist")
+        let settingsPlist = NSDictionary(contentsOf:settingsUrl)!
+        let preferences = settingsPlist["PreferenceSpecifiers"] as! [NSDictionary]
+        
+        var defaultsToRegister = Dictionary<String, Any>()
+        
+        for preference in preferences {
+            guard let key = preference["Key"] as? String else {
+                NSLog("Key not found")
+                continue
+            }
+            defaultsToRegister[key] = preference["DefaultValue"]
+        }
+        UserDefaults.standard.register(defaults: defaultsToRegister)
+    }
     //-------------------------------
     func applicationDidEnterBackground(_ application: UIApplication) {
         SocketIOManager.sharedInstance.closeConnection()
@@ -28,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //-------------------------------
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        registerDefaultsFromSettingsBundle()
         SocketIOManager.sharedInstance.establishConnection()
         UIApplication.shared.registerForRemoteNotifications()
         return true
@@ -37,8 +50,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 didRegisterForRemoteNotificationsWithDeviceToken
                     deviceToken: Data) {
         print("-----> didRegisterForRemoteNotificationsWithDeviceToken")
-        print(UIDevice.current.name)
-        print(UIDevice.current.model)
+//        print(UIDevice.current.name)
+//        print(UIDevice.current.model)
+        
         
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
         

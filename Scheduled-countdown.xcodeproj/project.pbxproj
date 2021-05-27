@@ -11,6 +11,11 @@
 		088B4A8F265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
 		088B4A90265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
 		088B4A91265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
+		088B4A93265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
+		088B4A94265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
+		088B4A95265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
+		088B4A96265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
+		088B4A97265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
 		84148FC425EE8C5200CF054F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC325EE8C5200CF054F /* AppDelegate.swift */; };
 		84148FC625EE8C5200CF054F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC525EE8C5200CF054F /* SceneDelegate.swift */; };
 		84148FC825EE8C5200CF054F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC725EE8C5200CF054F /* ContentView.swift */; };
@@ -96,6 +101,7 @@
 		08673DF2265E25D0008EA8D8 /* Scheduled-countdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Scheduled-countdown.entitlements"; sourceTree = "<group>"; };
 		088B4A8C265EDC0D00F882D6 /* Scheduled-countdown WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scheduled-countdown WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		088B4A8D265EDC0E00F882D6 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		088B4A92265F90B000F882D6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		84148FC025EE8C5200CF054F /* Scheduled-countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scheduled-countdown.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84148FC325EE8C5200CF054F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84148FC525EE8C5200CF054F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 		84148FB725EE8C5200CF054F = {
 			isa = PBXGroup;
 			children = (
+				088B4A92265F90B000F882D6 /* Settings.bundle */,
 				8414902C25EE8FD200CF054F /* Settings-Watch.bundle */,
 				84148FC225EE8C5200CF054F /* Scheduled-countdown */,
 				84148FD925EE8C5200CF054F /* Scheduled-countdownTests */,
@@ -439,6 +446,7 @@
 			files = (
 				84148FD025EE8C5200CF054F /* LaunchScreen.storyboard in Resources */,
 				84148FCD25EE8C5200CF054F /* Preview Assets.xcassets in Resources */,
+				088B4A93265F90B100F882D6 /* Settings.bundle in Resources */,
 				8414902D25EE8FD200CF054F /* Settings-Watch.bundle in Resources */,
 				84148FCA25EE8C5200CF054F /* Assets.xcassets in Resources */,
 			);
@@ -448,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088B4A94265F90B100F882D6 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088B4A95265F90B100F882D6 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84148FF325EE8C5300CF054F /* Assets.xcassets in Resources */,
+				088B4A96265F90B100F882D6 /* Settings.bundle in Resources */,
 				84148FF125EE8C5200CF054F /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8414900E25EE8C5300CF054F /* Preview Assets.xcassets in Resources */,
+				088B4A97265F90B100F882D6 /* Settings.bundle in Resources */,
 				8414900B25EE8C5300CF054F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

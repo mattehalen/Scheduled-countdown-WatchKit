@@ -12,9 +12,9 @@ import SocketIO
 class SocketIOManager: NSObject {
     static let sharedInstance = SocketIOManager()
     
-    let defaults = UserDefaults.init(suiteName: "group.com.Scheduled-countdown.settings")
-    lazy var default_ip = defaults?.string(forKey: "ip_adress") ?? "192.168.8.175"
-    lazy var ipString : String = "http://\(default_ip):3000"
+    //let defaults = UserDefaults.init(suiteName: "group.com.Scheduled-countdown.settings")
+    lazy var default_ip = UserDefaults.standard.object(forKey: "ios_ip_address")
+    lazy var ipString : String = "http://\(default_ip ?? "127.0.0.1"):3000"
     
     lazy var manager = SocketManager(socketURL: URL(string: ipString)!, config: [.log(false),.compress,.path("/ws")])
 
@@ -22,10 +22,12 @@ class SocketIOManager: NSObject {
 
     override init() {
     super.init()
+        print("++++++++++>>>> SocketManager.swift init()")
+        print(ipString)
 
+        
         socket = manager.defaultSocket
 
-        //Listener to capture any message that your server emits for "emitMessage" key. You can add multiple listeners to capture various emits from your server.
         socket.on("message") { (data, ack) in
             //print("Socket Ack: \(ack)")
             //print("Emitted Data: \(data)")
