@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import SocketIO
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    //-------------------------------
+//    let defaults = UserDefaults.init(suiteName: "group.com.Scheduled-countdown.settings")
+//
+//    lazy var default_ip = defaults?.string(forKey: "ip_adress") ?? "localhost"
+//    lazy var ipString : String = "http://\(default_ip):3000"
+//    lazy var  manager = SocketManager(socketURL: URL(string: ipString)!, config: [.log(false),.compress,.path("/ws")])
+    //-------------------------------
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        SocketIOManager.sharedInstance.closeConnection()
+    }
 
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        SocketIOManager.sharedInstance.establishConnection()
+    }
+    //-------------------------------
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        SocketIOManager.sharedInstance.establishConnection()
         UIApplication.shared.registerForRemoteNotifications()
         return true
     }
@@ -21,16 +37,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 didRegisterForRemoteNotificationsWithDeviceToken
                     deviceToken: Data) {
         print("-----> didRegisterForRemoteNotificationsWithDeviceToken")
-        print(deviceToken)
-//        self.sendDeviceTokenToServer(data: deviceToken)
-//        self.enableRemoteNotificationFeatures()
-//        self.forwardTokenToServer(token: deviceToken)
-    }
+        print(UIDevice.current.name)
+        print(UIDevice.current.model)
+        
+        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+            SocketIOManager.sharedInstance.emit(message: ["type":"deviceToken","message":["token":"\(deviceTokenString))","deviceName":UIDevice.current.name,"deviceModel":UIDevice.current.model]])
+            print(deviceTokenString)
+        })
+        
+        
+
+
+        }
     func application(_ application: UIApplication,
                 didFailToRegisterForRemoteNotificationsWithError
                     error: Error) {
        // Try again later.
+        print("-----> didFailToRegisterForRemoteNotificationsWithError")
+        print(error)
+        
     }
+    
+
     //----------------------------------------------------------------------------------------------------
 
     // MARK: UISceneSession Lifecycle

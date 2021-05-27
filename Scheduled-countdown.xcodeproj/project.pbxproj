@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		088B4A8E265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
+		088B4A8F265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
+		088B4A90265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
+		088B4A91265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
 		84148FC425EE8C5200CF054F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC325EE8C5200CF054F /* AppDelegate.swift */; };
 		84148FC625EE8C5200CF054F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC525EE8C5200CF054F /* SceneDelegate.swift */; };
 		84148FC825EE8C5200CF054F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC725EE8C5200CF054F /* ContentView.swift */; };
@@ -90,6 +94,8 @@
 
 /* Begin PBXFileReference section */
 		08673DF2265E25D0008EA8D8 /* Scheduled-countdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Scheduled-countdown.entitlements"; sourceTree = "<group>"; };
+		088B4A8C265EDC0D00F882D6 /* Scheduled-countdown WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scheduled-countdown WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		088B4A8D265EDC0E00F882D6 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 		84148FC025EE8C5200CF054F /* Scheduled-countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scheduled-countdown.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84148FC325EE8C5200CF054F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84148FC525EE8C5200CF054F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +200,8 @@
 				84148FCE25EE8C5200CF054F /* LaunchScreen.storyboard */,
 				84148FD125EE8C5200CF054F /* Info.plist */,
 				84148FCB25EE8C5200CF054F /* Preview Content */,
+				088B4A8D265EDC0E00F882D6 /* SocketManager.swift */,
+				088B4A8C265EDC0D00F882D6 /* Scheduled-countdown WatchKit App-Bridging-Header.h */,
 			);
 			path = "Scheduled-countdown";
 			sourceTree = "<group>";
@@ -392,6 +400,7 @@
 					};
 					84148FE925EE8C5200CF054F = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1250;
 					};
 					84148FF825EE8C5300CF054F = {
 						CreatedOnToolsVersion = 11.3;
@@ -530,6 +539,7 @@
 			files = (
 				84148FC425EE8C5200CF054F /* AppDelegate.swift in Sources */,
 				84148FC625EE8C5200CF054F /* SceneDelegate.swift in Sources */,
+				088B4A8E265EDC0E00F882D6 /* SocketManager.swift in Sources */,
 				84148FC825EE8C5200CF054F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088B4A8F265EDC0E00F882D6 /* SocketManager.swift in Sources */,
 				84148FDB25EE8C5200CF054F /* Scheduled_countdownTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088B4A90265EDC0E00F882D6 /* SocketManager.swift in Sources */,
 				84148FE625EE8C5200CF054F /* Scheduled_countdownUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,6 +568,7 @@
 			files = (
 				8414900125EE8C5300CF054F /* HostingController.swift in Sources */,
 				84148FFF25EE8C5300CF054F /* ContentView.swift in Sources */,
+				088B4A91265EDC0E00F882D6 /* SocketManager.swift in Sources */,
 				8414900525EE8C5300CF054F /* NotificationController.swift in Sources */,
 				8414900325EE8C5300CF054F /* ExtensionDelegate.swift in Sources */,
 				8414900725EE8C5300CF054F /* NotificationView.swift in Sources */,
@@ -789,17 +802,25 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = F8993Q6N82;
 				IBSC_MODULE = Scheduled_countdown_WatchKit_Extension;
 				INFOPLIST_FILE = "Scheduled-countdown WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Scheduled-countdown/Scheduled-countdown WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.1;
@@ -811,17 +832,24 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = F8993Q6N82;
 				IBSC_MODULE = Scheduled_countdown_WatchKit_Extension;
 				INFOPLIST_FILE = "Scheduled-countdown WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Scheduled-countdown/Scheduled-countdown WatchKit App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.1;
