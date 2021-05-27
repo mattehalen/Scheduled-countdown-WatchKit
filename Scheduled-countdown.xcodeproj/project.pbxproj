@@ -16,6 +16,10 @@
 		088B4A95265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
 		088B4A96265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
 		088B4A97265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
+		088B4A992660333700F882D6 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
+		088B4A9A2660333700F882D6 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
+		088B4A9B2660333700F882D6 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
+		088B4A9C2660333800F882D6 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
 		84148FC425EE8C5200CF054F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC325EE8C5200CF054F /* AppDelegate.swift */; };
 		84148FC625EE8C5200CF054F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC525EE8C5200CF054F /* SceneDelegate.swift */; };
 		84148FC825EE8C5200CF054F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC725EE8C5200CF054F /* ContentView.swift */; };
@@ -102,6 +106,7 @@
 		088B4A8C265EDC0D00F882D6 /* Scheduled-countdown WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scheduled-countdown WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		088B4A8D265EDC0E00F882D6 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 		088B4A92265F90B000F882D6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		088B4A982660333600F882D6 /* GlobalVaribles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVaribles.swift; sourceTree = "<group>"; };
 		84148FC025EE8C5200CF054F /* Scheduled-countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scheduled-countdown.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84148FC325EE8C5200CF054F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84148FC525EE8C5200CF054F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +214,7 @@
 				84148FCB25EE8C5200CF054F /* Preview Content */,
 				088B4A8D265EDC0E00F882D6 /* SocketManager.swift */,
 				088B4A8C265EDC0D00F882D6 /* Scheduled-countdown WatchKit App-Bridging-Header.h */,
+				088B4A982660333600F882D6 /* GlobalVaribles.swift */,
 			);
 			path = "Scheduled-countdown";
 			sourceTree = "<group>";
@@ -550,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84148FC425EE8C5200CF054F /* AppDelegate.swift in Sources */,
+				088B4A992660333700F882D6 /* GlobalVaribles.swift in Sources */,
 				84148FC625EE8C5200CF054F /* SceneDelegate.swift in Sources */,
 				088B4A8E265EDC0E00F882D6 /* SocketManager.swift in Sources */,
 				84148FC825EE8C5200CF054F /* ContentView.swift in Sources */,
@@ -560,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088B4A9A2660333700F882D6 /* GlobalVaribles.swift in Sources */,
 				088B4A8F265EDC0E00F882D6 /* SocketManager.swift in Sources */,
 				84148FDB25EE8C5200CF054F /* Scheduled_countdownTests.swift in Sources */,
 			);
@@ -569,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088B4A9B2660333700F882D6 /* GlobalVaribles.swift in Sources */,
 				088B4A90265EDC0E00F882D6 /* SocketManager.swift in Sources */,
 				84148FE625EE8C5200CF054F /* Scheduled_countdownUITests.swift in Sources */,
 			);
@@ -578,6 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088B4A9C2660333800F882D6 /* GlobalVaribles.swift in Sources */,
 				8414900125EE8C5300CF054F /* HostingController.swift in Sources */,
 				84148FFF25EE8C5300CF054F /* ContentView.swift in Sources */,
 				088B4A91265EDC0E00F882D6 /* SocketManager.swift in Sources */,
