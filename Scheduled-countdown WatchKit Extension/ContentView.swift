@@ -57,128 +57,16 @@ final class Service: ObservableObject{
     init(){
         print(default_ip)
         
-        let default_notification    = defaults?.bool(forKey: "use_notifications")
-        if(default_notification == true){
-            self.default_notification_setting = true
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                if success {
-                    print("All set!")
-                } else if let error = error {
-                    print(error.localizedDescription)
-                }
-            }
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            self.currentTime = GlobalVaribles.sharedInstance.currentTime
+            self.title = GlobalVaribles.sharedInstance.title
+            self.time = GlobalVaribles.sharedInstance.time
+            self.countDownBool = GlobalVaribles.sharedInstance.countDownBool
+            self.bgColor = GlobalVaribles.sharedInstance.bgColor
+            self.countDownTimeInMS = GlobalVaribles.sharedInstance.countDownTimeInMS
+            self.connected = GlobalVaribles.sharedInstance.connected
+        }
             
-        }else if(default_notification == false){
-            self.default_notification_setting = false
-        }
-
-        let default_debug = defaults?.bool(forKey: "debug")
-        if(default_debug == true){
-            self.default_debug_setting = true
-        }else if(default_debug == false){
-            self.default_debug_setting = false
-        }
-
-        self.default_ip_setting = String(default_ip)
-
-        let socket = manager.defaultSocket
-        socket.on(clientEvent: .connect){ (data, ack) in
-            print("Connected")
-            self.connected = true
-        }
-        socket.on(clientEvent: .error){ (data, ack) in
-            print("error")
-            self.connected = false
-        }
-        
-        socket.on("message"){ [weak self] (data,ack) in
-            if let getSocket = data as? [[String:Any]]{
-                if let socketType = getSocket[0]["type"] as? String {
-                    if socketType == "currentTime"{
-                        let socketMessage = getSocket[0]["message"]
-                        DispatchQueue.main.async {
-                            self!.currentTime = socketMessage as! String
-                        }
-                    }
-                    if socketType == "countDown"{
-                        let socketObj = getSocket[0]["message"] as? [String: Any]
-                        let socketTime = socketObj!["time"] as? String
-                        let socketTitle = socketObj!["title"] as? String
-                        let socketBool = socketObj!["bool"] as? Bool
-                        
-                        let socketColorObj = socketObj!["colors"] as? [String: Any]
-                        let socketDownColor = socketColorObj!["countDownColor"] as? String
-                        let socketUpColor = socketColorObj!["countUpColor"] as? String
-                        let socketNormalColor = "#000000"
-
-                        var socketCountDownInMs = -1000000
-                        if socketObj!["countDownTimeInMS"] as? Int != nil {
-                            socketCountDownInMs = socketObj!["countDownTimeInMS"] as! Int
-                            //localNotis(countdown: socketCountDownInMs)
-                            
-                            //---------- Local UNUserNotificationCenter
-                            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-                            let fiveMin     = ((socketCountDownInMs/1000)+(5*60)) * -1
-                            if(fiveMin > 0){
-                                self?.default_debug_var1 = String(fiveMin)
-                                
-                                let content_five = UNMutableNotificationContent()
-                                content_five.title = "5 min"
-                                content_five.subtitle = ""
-                                content_five.sound = UNNotificationSound.default
-                                let trigger_five = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(fiveMin), repeats: false)
-                                let request_five = UNNotificationRequest(identifier: UUID().uuidString, content: content_five, trigger: trigger_five)
-                                UNUserNotificationCenter.current().add(request_five)
-                                
-                            }
-                            //--------------------------------------------------
-                        }else{
-                        }
-                        
-                        let socketCountUp = socketObj!["CountUp"] as! Int
-                        //let socketCountDown = socketObj!["CountDown"] as! Int
-                        
-                        if (socketCountDownInMs > (-3*60000) && socketCountDownInMs < 0 ){
-                            self!.bgColor = socketDownColor!
-                        } else if(socketCountDownInMs > 0 && socketCountDownInMs < (socketCountUp)){
-                            self!.bgColor = socketUpColor!
-                        }else{
-                            self!.bgColor = socketNormalColor
-                        }
-                        
-                                        
-                        //-------------------
-                        if(socketCountDownInMs > (-5*60000) && socketCountDownInMs < (-5*60000+1000)){
-                            WKInterfaceDevice.current().play(.success)
-                        }
-                        if(socketCountDownInMs > (-4*60000) && socketCountDownInMs < (-4*60000+1000)){
-                            WKInterfaceDevice.current().play(.success)
-
-                        }
-                        if(socketCountDownInMs > (-3*60000) && socketCountDownInMs < (-3*60000+1000)){
-                            WKInterfaceDevice.current().play(.success)
-
-                        }
-                        if(socketCountDownInMs > (-2*60000) && socketCountDownInMs < (-2*60000+1000)){
-                          WKInterfaceDevice.current().play(.success)
-
-                        }
-                        if(socketCountDownInMs > (-1*60000) && socketCountDownInMs < (-1*60000+1000)){
-                            WKInterfaceDevice.current().play(.success)
-                        }
-                        //-------------------
-                        DispatchQueue.main.async {
-                            self!.title = socketTitle ?? ""
-                            self!.time = socketTime!
-                            self!.countDownBool = socketBool!
-                        }
-                    }
-                }
-            }
-            
-            
-        }
-        socket.connect()
     }
 }
 
@@ -260,19 +148,20 @@ struct ContentView: View {
         )
         .overlay(
             VStack{
-                if(service.default_debug_setting){
-                    Text(service.default_ip_setting)
-                    Text(service.default_debug_var1)
-                    //Text(String(service.default_notification_setting))
-                    //Text(String(service.default_debug_setting))
-                    Text(var1)
-                }
-                if(service.countDownBool){
-                    Text(service.title).font(.subheadline)
-                    Text(service.time).fontWeight(.heavy).font(.title)
-                }else{
-                    Text(service.currentTime).fontWeight(.heavy).font(.largeTitle)
-                }
+                Text("hello").foregroundColor(Color.white)
+//                if(service.default_debug_setting){
+//                    Text(service.default_ip_setting).foregroundColor(Color.white)
+//                    Text(service.default_debug_var1).foregroundColor(Color.white)
+//                    //Text(String(service.default_notification_setting)).foregroundColor(Color.white)
+//                    //Text(String(service.default_debug_setting)).foregroundColor(Color.white)
+//                    Text(var1)
+//                }
+//                if(service.countDownBool){
+//                    Text(service.title).font(.subheadline).foregroundColor(Color.white)
+//                    Text(service.time).fontWeight(.heavy).font(.title).foregroundColor(Color.white)
+//                }else{
+//                    Text(service.currentTime).fontWeight(.heavy).font(.largeTitle).foregroundColor(Color.white)
+//                }
             }
         )
         
