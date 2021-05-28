@@ -8,9 +8,30 @@
 
 import UIKit
 import SocketIO
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate {
+    func registerForRemoteNotification() {
+        print("--------------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------")
+
+            if #available(iOS 10.0, *) {
+                let center  = UNUserNotificationCenter.current()
+
+                center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+                    if error == nil{
+                        UIApplication.shared.registerForRemoteNotifications()
+                    }
+                }
+
+            }
+            else {
+                UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.sound, .alert, .badge], categories: nil))
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
     //-------------------------------
     func registerDefaultsFromSettingsBundle()
     {
@@ -40,7 +61,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //-------------------------------
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        registerForRemoteNotification()
         registerDefaultsFromSettingsBundle()
+        
+        GlobalVaribles.sharedInstance.connected = false
         SocketIOManager.sharedInstance.establishConnection()
         UIApplication.shared.registerForRemoteNotifications()
         return true

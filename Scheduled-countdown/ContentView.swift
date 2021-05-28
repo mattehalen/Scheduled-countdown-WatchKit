@@ -49,8 +49,6 @@ final class Service: ObservableObject{
     @Published var countDownTimeInMS = 0
     @Published var connected = false
     
-
-    
     init() {
         self.debug_number = BundleVersion as! String
         self.ipAddress = UserDefaults.standard.object(forKey: "ios_ip_address") as! String
@@ -66,9 +64,7 @@ final class Service: ObservableObject{
             self.connected = GlobalVaribles.sharedInstance.connected
         }
         
-//        print("----------> IOS")
-//        print("bundleIdentifier \(bundleIdentifier ?? "value")")
-//        print("default_debug_setting \(default_debug_setting)")
+        print("----------> IOS")
         
     }
 }
@@ -87,28 +83,32 @@ struct ContentView: View {
         .overlay(
             VStack{
                 if(service.default_debug_setting){
-                    Text("debug_number \(service.debug_number)")
-                    Text(service.ipAddress)
-                    Text(String(service.default_debug_setting))
-                    Text(service.currentTime).fontWeight(.heavy).font(.largeTitle)
-                    Text(service.title)
-                    Text(service.time)
-                    Text(String(service.countDownBool))
-                    Text(service.bgColor)
-                    Text(String(service.countDownTimeInMS))
-                    Text(String(service.connected))
+                    Text("debug_number = \(service.debug_number)")
+                    Text("ipAddress = \(service.ipAddress)").foregroundColor(Color.white)
+                    Text("default_debug_setting = \(String(service.default_debug_setting))").foregroundColor(Color.white)
+                    Text("currentTime = \(service.currentTime)").fontWeight(.heavy).font(.largeTitle).foregroundColor(Color.white)
+                    Text("title = \(service.title)").foregroundColor(Color.white)
+                    Text("time = \(service.time)").foregroundColor(Color.white)
+                    Text("countDownBool = \(String(service.countDownBool))").foregroundColor(Color.white)
+                    Text("bgColor = \(service.bgColor)").foregroundColor(Color.white)
+                    Text("countDownTimeInMS = \(String(service.countDownTimeInMS))").foregroundColor(Color.white)
+                    Text("connected = \(String(service.connected))").foregroundColor(Color.white)
                 }
                 else{
                     if(service.connected){
                         if(service.countDownBool){
-                            Text(service.title).font(.subheadline)
-                            Text(service.time).fontWeight(.heavy).font(.title)
+                            Text(service.title).font(.system(size: 30, weight: .medium, design: .default)).foregroundColor(Color.white)
+                            Text(service.time).font(.system(size: 70, weight: .heavy, design: .default)).foregroundColor(Color.white)
                         }else{
-                            Text(service.currentTime).fontWeight(.heavy).font(.largeTitle)
+                            Text(service.currentTime).fontWeight(.heavy).font(.system(size: 90, weight: .bold, design: .default)).foregroundColor(Color.white)
                         }
                     }
                     else{
-                        Text("Not Connected to Socket.IO Server")
+                        Text("Not Connected to Socket.IO Server").foregroundColor(Color.white)
+                        Text("Check ipaddres under -> Settings/Scheduled-Countdown").foregroundColor(Color.white)
+                        Text("Check that desktop APP is running and Online").foregroundColor(Color.white)
+                        Text("Remember Write ipaddress like 192.168.0.1:3000 / yourIP:APP-Port")
+                        
                     }
                 }
             }

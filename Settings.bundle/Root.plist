@@ -14,7 +14,7 @@
 			<key>Key</key>
 			<string>ios_ip_address</string>
 			<key>DefaultValue</key>
-			<string>127.0.0.1</string>
+			<string>127.0.0.1:3000</string>
 		</dict>
 		<dict>
 			<key>Type</key>

@@ -14,7 +14,7 @@ class SocketIOManager: NSObject,ObservableObject {
     static let sharedInstance = SocketIOManager()
     
     lazy var default_ip = UserDefaults.standard.object(forKey: "ios_ip_address")
-    lazy var ipString : String = "http://\(default_ip ?? "127.0.0.1"):3000"
+    lazy var ipString : String = "http://\(default_ip ?? "127.0.0.1:3000")"
     
     lazy var manager = SocketManager(socketURL: URL(string: ipString)!, config: [.log(false),.compress,.path("/ws")])
 
@@ -27,6 +27,7 @@ class SocketIOManager: NSObject,ObservableObject {
         
         socket.on(clientEvent: .connect) {data, ack in
             print("socket connected")
+            GlobalVaribles.sharedInstance.connected = true
         }
         
         socket.on("message") { (data, ack) in
@@ -93,13 +94,13 @@ class SocketIOManager: NSObject,ObservableObject {
     func establishConnection() {
         socket.connect()
         print("Connected to Socket !")
-        GlobalVaribles.sharedInstance.connected = true
+        //GlobalVaribles.sharedInstance.connected = true
     }
 
     func closeConnection() {
         socket.disconnect()
         print("Disconnected from Socket !")
-        GlobalVaribles.sharedInstance.connected = false
+        //GlobalVaribles.sharedInstance.connected = false
     }
     
     func on(message: [String: Any]){
