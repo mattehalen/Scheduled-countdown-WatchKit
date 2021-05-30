@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Scheduled-countdown.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>bitcode</key>
+			<true/>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>C06298B645D15CB44BE8F6517B5678140AF80CCD</string>
+				<key>dateExpires</key>
+				<string>2022-05-28</string>
+				<key>type</key>
+				<string>Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>F8993Q6N82.com.Scheduled-countdown</string>
+				<key>aps-environment</key>
+				<string>production</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>F8993Q6N82</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>Scheduled-countdown.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>50f305f3-15d5-4f6c-a3f0-d0185ad2e4f9</string>
+				<key>name</key>
+				<string>iOS Team Store Provisioning Profile: com.Scheduled-countdown</string>
+			</dict>
+			<key>symbols</key>
+			<true/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>F8993Q6N82</string>
+				<key>name</key>
+				<string>Mathias Halen</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

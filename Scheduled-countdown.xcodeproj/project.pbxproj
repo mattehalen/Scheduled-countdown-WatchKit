@@ -8,93 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		088B4A8E265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
-		088B4A8F265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
-		088B4A90265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
-		088B4A91265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
 		088B4A93265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
-		088B4A94265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
-		088B4A95265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
-		088B4A96265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
-		088B4A97265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
 		088B4A992660333700F882D6 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
-		088B4A9A2660333700F882D6 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
-		088B4A9B2660333700F882D6 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
-		088B4A9C2660333800F882D6 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
 		84148FC425EE8C5200CF054F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC325EE8C5200CF054F /* AppDelegate.swift */; };
 		84148FC625EE8C5200CF054F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC525EE8C5200CF054F /* SceneDelegate.swift */; };
 		84148FC825EE8C5200CF054F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC725EE8C5200CF054F /* ContentView.swift */; };
 		84148FCA25EE8C5200CF054F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84148FC925EE8C5200CF054F /* Assets.xcassets */; };
 		84148FCD25EE8C5200CF054F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84148FCC25EE8C5200CF054F /* Preview Assets.xcassets */; };
 		84148FD025EE8C5200CF054F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84148FCE25EE8C5200CF054F /* LaunchScreen.storyboard */; };
-		84148FDB25EE8C5200CF054F /* Scheduled_countdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FDA25EE8C5200CF054F /* Scheduled_countdownTests.swift */; };
-		84148FE625EE8C5200CF054F /* Scheduled_countdownUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FE525EE8C5200CF054F /* Scheduled_countdownUITests.swift */; };
-		84148FEB25EE8C5200CF054F /* Scheduled-countdown WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 84148FEA25EE8C5200CF054F /* Scheduled-countdown WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		84148FF125EE8C5200CF054F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84148FEF25EE8C5200CF054F /* Interface.storyboard */; };
-		84148FF325EE8C5300CF054F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84148FF225EE8C5300CF054F /* Assets.xcassets */; };
-		84148FFA25EE8C5300CF054F /* Scheduled-countdown WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84148FF925EE8C5300CF054F /* Scheduled-countdown WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		84148FFF25EE8C5300CF054F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FFE25EE8C5300CF054F /* ContentView.swift */; };
-		8414900125EE8C5300CF054F /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414900025EE8C5300CF054F /* HostingController.swift */; };
-		8414900325EE8C5300CF054F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414900225EE8C5300CF054F /* ExtensionDelegate.swift */; };
-		8414900525EE8C5300CF054F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414900425EE8C5300CF054F /* NotificationController.swift */; };
-		8414900725EE8C5300CF054F /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414900625EE8C5300CF054F /* NotificationView.swift */; };
-		8414900925EE8C5300CF054F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414900825EE8C5300CF054F /* ComplicationController.swift */; };
-		8414900B25EE8C5300CF054F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8414900A25EE8C5300CF054F /* Assets.xcassets */; };
-		8414900E25EE8C5300CF054F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8414900D25EE8C5300CF054F /* Preview Assets.xcassets */; };
 		8414902625EE8E6B00CF054F /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 8414902525EE8E6B00CF054F /* SocketIO */; };
-		8414902B25EE8E8500CF054F /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 8414902A25EE8E8500CF054F /* SocketIO */; };
-		8414902D25EE8FD200CF054F /* Settings-Watch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8414902C25EE8FD200CF054F /* Settings-Watch.bundle */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		84148FD725EE8C5200CF054F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84148FB825EE8C5200CF054F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 84148FBF25EE8C5200CF054F;
-			remoteInfo = "Scheduled-countdown";
-		};
-		84148FE225EE8C5200CF054F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84148FB825EE8C5200CF054F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 84148FBF25EE8C5200CF054F;
-			remoteInfo = "Scheduled-countdown";
-		};
-		84148FEC25EE8C5200CF054F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84148FB825EE8C5200CF054F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 84148FE925EE8C5200CF054F;
-			remoteInfo = "Scheduled-countdown WatchKit App";
-		};
-		84148FFB25EE8C5300CF054F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84148FB825EE8C5200CF054F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 84148FF825EE8C5300CF054F;
-			remoteInfo = "Scheduled-countdown WatchKit Extension";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		8414901625EE8C5300CF054F /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				84148FFA25EE8C5300CF054F /* Scheduled-countdown WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8414901A25EE8C5300CF054F /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				84148FEB25EE8C5200CF054F /* Scheduled-countdown WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,29 +46,6 @@
 		84148FCC25EE8C5200CF054F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84148FCF25EE8C5200CF054F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84148FD125EE8C5200CF054F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84148FD625EE8C5200CF054F /* Scheduled-countdownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scheduled-countdownTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84148FDA25EE8C5200CF054F /* Scheduled_countdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduled_countdownTests.swift; sourceTree = "<group>"; };
-		84148FDC25EE8C5200CF054F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84148FE125EE8C5200CF054F /* Scheduled-countdownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scheduled-countdownUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84148FE525EE8C5200CF054F /* Scheduled_countdownUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduled_countdownUITests.swift; sourceTree = "<group>"; };
-		84148FE725EE8C5200CF054F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84148FEA25EE8C5200CF054F /* Scheduled-countdown WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scheduled-countdown WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84148FF025EE8C5200CF054F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		84148FF225EE8C5300CF054F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		84148FF425EE8C5300CF054F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84148FF925EE8C5300CF054F /* Scheduled-countdown WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Scheduled-countdown WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84148FFE25EE8C5300CF054F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8414900025EE8C5300CF054F /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
-		8414900225EE8C5300CF054F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		8414900425EE8C5300CF054F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		8414900625EE8C5300CF054F /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		8414900825EE8C5300CF054F /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		8414900A25EE8C5300CF054F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8414900D25EE8C5300CF054F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8414900F25EE8C5300CF054F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8414901025EE8C5300CF054F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		8414902C25EE8FD200CF054F /* Settings-Watch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Settings-Watch.bundle"; sourceTree = "<group>"; };
-		8414902E25EE8FEA00CF054F /* Scheduled-countdown WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Scheduled-countdown WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,28 +57,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84148FD325EE8C5200CF054F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84148FDE25EE8C5200CF054F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84148FF625EE8C5300CF054F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8414902B25EE8E8500CF054F /* SocketIO in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -178,12 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				088B4A92265F90B000F882D6 /* Settings.bundle */,
-				8414902C25EE8FD200CF054F /* Settings-Watch.bundle */,
 				84148FC225EE8C5200CF054F /* Scheduled-countdown */,
-				84148FD925EE8C5200CF054F /* Scheduled-countdownTests */,
-				84148FE425EE8C5200CF054F /* Scheduled-countdownUITests */,
-				84148FEE25EE8C5200CF054F /* Scheduled-countdown WatchKit App */,
-				84148FFD25EE8C5300CF054F /* Scheduled-countdown WatchKit Extension */,
 				84148FC125EE8C5200CF054F /* Products */,
 				8414902925EE8E8500CF054F /* Frameworks */,
 			);
@@ -193,10 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				84148FC025EE8C5200CF054F /* Scheduled-countdown.app */,
-				84148FD625EE8C5200CF054F /* Scheduled-countdownTests.xctest */,
-				84148FE125EE8C5200CF054F /* Scheduled-countdownUITests.xctest */,
-				84148FEA25EE8C5200CF054F /* Scheduled-countdown WatchKit App.app */,
-				84148FF925EE8C5300CF054F /* Scheduled-countdown WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,60 +104,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		84148FD925EE8C5200CF054F /* Scheduled-countdownTests */ = {
-			isa = PBXGroup;
-			children = (
-				84148FDA25EE8C5200CF054F /* Scheduled_countdownTests.swift */,
-				84148FDC25EE8C5200CF054F /* Info.plist */,
-			);
-			path = "Scheduled-countdownTests";
-			sourceTree = "<group>";
-		};
-		84148FE425EE8C5200CF054F /* Scheduled-countdownUITests */ = {
-			isa = PBXGroup;
-			children = (
-				84148FE525EE8C5200CF054F /* Scheduled_countdownUITests.swift */,
-				84148FE725EE8C5200CF054F /* Info.plist */,
-			);
-			path = "Scheduled-countdownUITests";
-			sourceTree = "<group>";
-		};
-		84148FEE25EE8C5200CF054F /* Scheduled-countdown WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				84148FEF25EE8C5200CF054F /* Interface.storyboard */,
-				84148FF225EE8C5300CF054F /* Assets.xcassets */,
-				84148FF425EE8C5300CF054F /* Info.plist */,
-			);
-			path = "Scheduled-countdown WatchKit App";
-			sourceTree = "<group>";
-		};
-		84148FFD25EE8C5300CF054F /* Scheduled-countdown WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				8414902E25EE8FEA00CF054F /* Scheduled-countdown WatchKit Extension.entitlements */,
-				84148FFE25EE8C5300CF054F /* ContentView.swift */,
-				8414900025EE8C5300CF054F /* HostingController.swift */,
-				8414900225EE8C5300CF054F /* ExtensionDelegate.swift */,
-				8414900425EE8C5300CF054F /* NotificationController.swift */,
-				8414900625EE8C5300CF054F /* NotificationView.swift */,
-				8414900825EE8C5300CF054F /* ComplicationController.swift */,
-				8414900A25EE8C5300CF054F /* Assets.xcassets */,
-				8414900F25EE8C5300CF054F /* Info.plist */,
-				8414901025EE8C5300CF054F /* PushNotificationPayload.apns */,
-				8414900C25EE8C5300CF054F /* Preview Content */,
-			);
-			path = "Scheduled-countdown WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		8414900C25EE8C5300CF054F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				8414900D25EE8C5300CF054F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		8414902925EE8E8500CF054F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,7 +127,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				84148FED25EE8C5200CF054F /* PBXTargetDependency */,
 			);
 			name = "Scheduled-countdown";
 			packageProductDependencies = (
@@ -313,82 +135,6 @@
 			productName = "Scheduled-countdown";
 			productReference = 84148FC025EE8C5200CF054F /* Scheduled-countdown.app */;
 			productType = "com.apple.product-type.application";
-		};
-		84148FD525EE8C5200CF054F /* Scheduled-countdownTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8414901E25EE8C5300CF054F /* Build configuration list for PBXNativeTarget "Scheduled-countdownTests" */;
-			buildPhases = (
-				84148FD225EE8C5200CF054F /* Sources */,
-				84148FD325EE8C5200CF054F /* Frameworks */,
-				84148FD425EE8C5200CF054F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				84148FD825EE8C5200CF054F /* PBXTargetDependency */,
-			);
-			name = "Scheduled-countdownTests";
-			productName = "Scheduled-countdownTests";
-			productReference = 84148FD625EE8C5200CF054F /* Scheduled-countdownTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		84148FE025EE8C5200CF054F /* Scheduled-countdownUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8414902125EE8C5300CF054F /* Build configuration list for PBXNativeTarget "Scheduled-countdownUITests" */;
-			buildPhases = (
-				84148FDD25EE8C5200CF054F /* Sources */,
-				84148FDE25EE8C5200CF054F /* Frameworks */,
-				84148FDF25EE8C5200CF054F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				84148FE325EE8C5200CF054F /* PBXTargetDependency */,
-			);
-			name = "Scheduled-countdownUITests";
-			productName = "Scheduled-countdownUITests";
-			productReference = 84148FE125EE8C5200CF054F /* Scheduled-countdownUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		84148FE925EE8C5200CF054F /* Scheduled-countdown WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8414901725EE8C5300CF054F /* Build configuration list for PBXNativeTarget "Scheduled-countdown WatchKit App" */;
-			buildPhases = (
-				84148FE825EE8C5200CF054F /* Resources */,
-				8414901625EE8C5300CF054F /* Embed App Extensions */,
-				08EAD18725F8BAA000B5F76D /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				84148FFC25EE8C5300CF054F /* PBXTargetDependency */,
-			);
-			name = "Scheduled-countdown WatchKit App";
-			productName = "Scheduled-countdown WatchKit App";
-			productReference = 84148FEA25EE8C5200CF054F /* Scheduled-countdown WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		84148FF825EE8C5300CF054F /* Scheduled-countdown WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8414901325EE8C5300CF054F /* Build configuration list for PBXNativeTarget "Scheduled-countdown WatchKit Extension" */;
-			buildPhases = (
-				84148FF525EE8C5300CF054F /* Sources */,
-				84148FF625EE8C5300CF054F /* Frameworks */,
-				84148FF725EE8C5300CF054F /* Resources */,
-				08DF5E7225F8B8650096C250 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8414902825EE8E8000CF054F /* PBXTargetDependency */,
-			);
-			name = "Scheduled-countdown WatchKit Extension";
-			packageProductDependencies = (
-				8414902A25EE8E8500CF054F /* SocketIO */,
-			);
-			productName = "Scheduled-countdown WatchKit Extension";
-			productReference = 84148FF925EE8C5300CF054F /* Scheduled-countdown WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -401,21 +147,6 @@
 				ORGANIZATIONNAME = "Mathias Halén";
 				TargetAttributes = {
 					84148FBF25EE8C5200CF054F = {
-						CreatedOnToolsVersion = 11.3;
-					};
-					84148FD525EE8C5200CF054F = {
-						CreatedOnToolsVersion = 11.3;
-						TestTargetID = 84148FBF25EE8C5200CF054F;
-					};
-					84148FE025EE8C5200CF054F = {
-						CreatedOnToolsVersion = 11.3;
-						TestTargetID = 84148FBF25EE8C5200CF054F;
-					};
-					84148FE925EE8C5200CF054F = {
-						CreatedOnToolsVersion = 11.3;
-						LastSwiftMigration = 1250;
-					};
-					84148FF825EE8C5300CF054F = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
@@ -437,10 +168,6 @@
 			projectRoot = "";
 			targets = (
 				84148FBF25EE8C5200CF054F /* Scheduled-countdown */,
-				84148FD525EE8C5200CF054F /* Scheduled-countdownTests */,
-				84148FE025EE8C5200CF054F /* Scheduled-countdownUITests */,
-				84148FE925EE8C5200CF054F /* Scheduled-countdown WatchKit App */,
-				84148FF825EE8C5300CF054F /* Scheduled-countdown WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -453,44 +180,7 @@
 				84148FD025EE8C5200CF054F /* LaunchScreen.storyboard in Resources */,
 				84148FCD25EE8C5200CF054F /* Preview Assets.xcassets in Resources */,
 				088B4A93265F90B100F882D6 /* Settings.bundle in Resources */,
-				8414902D25EE8FD200CF054F /* Settings-Watch.bundle in Resources */,
 				84148FCA25EE8C5200CF054F /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84148FD425EE8C5200CF054F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				088B4A94265F90B100F882D6 /* Settings.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84148FDF25EE8C5200CF054F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				088B4A95265F90B100F882D6 /* Settings.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84148FE825EE8C5200CF054F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84148FF325EE8C5300CF054F /* Assets.xcassets in Resources */,
-				088B4A96265F90B100F882D6 /* Settings.bundle in Resources */,
-				84148FF125EE8C5200CF054F /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84148FF725EE8C5300CF054F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8414900E25EE8C5300CF054F /* Preview Assets.xcassets in Resources */,
-				088B4A97265F90B100F882D6 /* Settings.bundle in Resources */,
-				8414900B25EE8C5300CF054F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,40 +188,6 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		08DF5E6C25F8B8050096C250 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# @desc Auto-increment the build number every time the project is run. \n# @usage\n# 1. Select: your Target in Xcode\n# 2. Select: Editor -> Sheme -> Edit scheme\n# 3. Select: Build -> Pre-action -> + New Run Script Action\n# 4. Paste code below in to new \"Run Script\" section\n# 5. Select your target in \"Provide build settings from\"\n# 6. Insure that your starting build number is set to a whole integer and not a float (e.g. 1, not 1.0)\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
-		};
-		08DF5E7225F8B8650096C250 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# @desc Auto-increment the build number every time the project is run. \n# @usage\n# 1. Select: your Target in Xcode\n# 2. Select: Editor -> Sheme -> Edit scheme\n# 3. Select: Build -> Pre-action -> + New Run Script Action\n# 4. Paste code below in to new \"Run Script\" section\n# 5. Select your target in \"Provide build settings from\"\n# 6. Insure that your starting build number is set to a whole integer and not a float (e.g. 1, not 1.0)\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
-		};
-		08EAD18725F8BAA000B5F76D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -563,69 +219,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84148FD225EE8C5200CF054F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				088B4A9A2660333700F882D6 /* GlobalVaribles.swift in Sources */,
-				088B4A8F265EDC0E00F882D6 /* SocketManager.swift in Sources */,
-				84148FDB25EE8C5200CF054F /* Scheduled_countdownTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84148FDD25EE8C5200CF054F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				088B4A9B2660333700F882D6 /* GlobalVaribles.swift in Sources */,
-				088B4A90265EDC0E00F882D6 /* SocketManager.swift in Sources */,
-				84148FE625EE8C5200CF054F /* Scheduled_countdownUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84148FF525EE8C5300CF054F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				088B4A9C2660333800F882D6 /* GlobalVaribles.swift in Sources */,
-				8414900125EE8C5300CF054F /* HostingController.swift in Sources */,
-				84148FFF25EE8C5300CF054F /* ContentView.swift in Sources */,
-				088B4A91265EDC0E00F882D6 /* SocketManager.swift in Sources */,
-				8414900525EE8C5300CF054F /* NotificationController.swift in Sources */,
-				8414900325EE8C5300CF054F /* ExtensionDelegate.swift in Sources */,
-				8414900725EE8C5300CF054F /* NotificationView.swift in Sources */,
-				8414900925EE8C5300CF054F /* ComplicationController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		84148FD825EE8C5200CF054F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 84148FBF25EE8C5200CF054F /* Scheduled-countdown */;
-			targetProxy = 84148FD725EE8C5200CF054F /* PBXContainerItemProxy */;
-		};
-		84148FE325EE8C5200CF054F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 84148FBF25EE8C5200CF054F /* Scheduled-countdown */;
-			targetProxy = 84148FE225EE8C5200CF054F /* PBXContainerItemProxy */;
-		};
-		84148FED25EE8C5200CF054F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 84148FE925EE8C5200CF054F /* Scheduled-countdown WatchKit App */;
-			targetProxy = 84148FEC25EE8C5200CF054F /* PBXContainerItemProxy */;
-		};
-		84148FFC25EE8C5300CF054F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 84148FF825EE8C5300CF054F /* Scheduled-countdown WatchKit Extension */;
-			targetProxy = 84148FFB25EE8C5300CF054F /* PBXContainerItemProxy */;
-		};
-		8414902825EE8E8000CF054F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 8414902725EE8E8000CF054F /* SocketIO */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		84148FCE25EE8C5200CF054F /* LaunchScreen.storyboard */ = {
@@ -634,14 +228,6 @@
 				84148FCF25EE8C5200CF054F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		84148FEF25EE8C5200CF054F /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84148FF025EE8C5200CF054F /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -763,121 +349,6 @@
 			};
 			name = Release;
 		};
-		8414901425EE8C5300CF054F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "Scheduled-countdown WatchKit Extension/Scheduled-countdown WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_ASSET_PATHS = "\"Scheduled-countdown WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = F8993Q6N82;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Scheduled-countdown WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Debug;
-		};
-		8414901525EE8C5300CF054F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "Scheduled-countdown WatchKit Extension/Scheduled-countdown WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_ASSET_PATHS = "\"Scheduled-countdown WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = F8993Q6N82;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Scheduled-countdown WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Release;
-		};
-		8414901825EE8C5300CF054F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = F8993Q6N82;
-				IBSC_MODULE = Scheduled_countdown_WatchKit_Extension;
-				INFOPLIST_FILE = "Scheduled-countdown WatchKit App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Scheduled-countdown/Scheduled-countdown WatchKit App-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Debug;
-		};
-		8414901925EE8C5300CF054F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = F8993Q6N82;
-				IBSC_MODULE = Scheduled_countdown_WatchKit_Extension;
-				INFOPLIST_FILE = "Scheduled-countdown WatchKit App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Scheduled-countdown/Scheduled-countdown WatchKit App-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Release;
-		};
 		8414901C25EE8C5300CF054F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -894,6 +365,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -918,95 +390,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		8414901F25EE8C5300CF054F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F8993Q6N82;
-				INFOPLIST_FILE = "Scheduled-countdownTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdownTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scheduled-countdown.app/Scheduled-countdown";
-			};
-			name = Debug;
-		};
-		8414902025EE8C5300CF054F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F8993Q6N82;
-				INFOPLIST_FILE = "Scheduled-countdownTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdownTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scheduled-countdown.app/Scheduled-countdown";
-			};
-			name = Release;
-		};
-		8414902225EE8C5300CF054F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F8993Q6N82;
-				INFOPLIST_FILE = "Scheduled-countdownUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdownUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Scheduled-countdown";
-			};
-			name = Debug;
-		};
-		8414902325EE8C5300CF054F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F8993Q6N82;
-				INFOPLIST_FILE = "Scheduled-countdownUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdownUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Scheduled-countdown";
 			};
 			name = Release;
 		};
@@ -1022,47 +411,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8414901325EE8C5300CF054F /* Build configuration list for PBXNativeTarget "Scheduled-countdown WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8414901425EE8C5300CF054F /* Debug */,
-				8414901525EE8C5300CF054F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8414901725EE8C5300CF054F /* Build configuration list for PBXNativeTarget "Scheduled-countdown WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8414901825EE8C5300CF054F /* Debug */,
-				8414901925EE8C5300CF054F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8414901B25EE8C5300CF054F /* Build configuration list for PBXNativeTarget "Scheduled-countdown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8414901C25EE8C5300CF054F /* Debug */,
 				8414901D25EE8C5300CF054F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8414901E25EE8C5300CF054F /* Build configuration list for PBXNativeTarget "Scheduled-countdownTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8414901F25EE8C5300CF054F /* Debug */,
-				8414902025EE8C5300CF054F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8414902125EE8C5300CF054F /* Build configuration list for PBXNativeTarget "Scheduled-countdownUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8414902225EE8C5300CF054F /* Debug */,
-				8414902325EE8C5300CF054F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1082,16 +435,6 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		8414902525EE8E6B00CF054F /* SocketIO */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8414902425EE8E6B00CF054F /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
-			productName = SocketIO;
-		};
-		8414902725EE8E8000CF054F /* SocketIO */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8414902425EE8E6B00CF054F /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
-			productName = SocketIO;
-		};
-		8414902A25EE8E8500CF054F /* SocketIO */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8414902425EE8E6B00CF054F /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
 			productName = SocketIO;
