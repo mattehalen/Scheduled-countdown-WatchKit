@@ -13,16 +13,14 @@ import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate {
     func registerForRemoteNotification() {
-        print("--------------------------------------------------------------------------------")
-        print("--------------------------------------------------------------------------------")
-        print("--------------------------------------------------------------------------------")
-
             if #available(iOS 10.0, *) {
                 let center  = UNUserNotificationCenter.current()
 
                 center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
                     if error == nil{
-                        UIApplication.shared.registerForRemoteNotifications()
+                        DispatchQueue.main.async {
+                            UIApplication.shared.registerForRemoteNotifications()
+                        }
                     }
                 }
 
@@ -66,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         
         GlobalVaribles.sharedInstance.connected = false
         SocketIOManager.sharedInstance.establishConnection()
-        UIApplication.shared.registerForRemoteNotifications()
+        //UIApplication.shared.registerForRemoteNotifications()
         return true
     }
     //----------------------------------------------------------------------------------------------------
@@ -81,8 +79,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
-            SocketIOManager.sharedInstance.emit(message: ["type":"deviceToken","message":["token":"\(deviceTokenString))","deviceName":UIDevice.current.name,"deviceModel":UIDevice.current.model]])
-            print(deviceTokenString)
+            SocketIOManager.sharedInstance.emit(message: ["type":"deviceToken","message":["token":deviceTokenString,"deviceName":UIDevice.current.name,"deviceModel":UIDevice.current.model]])
+            //print(deviceTokenString)
         })
         
         

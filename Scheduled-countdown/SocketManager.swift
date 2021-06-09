@@ -39,7 +39,6 @@ class SocketIOManager: NSObject,ObservableObject {
                         let socketMessage = getSocket[0]["message"]
                         DispatchQueue.main.async {
                             self.currentTime = socketMessage as! String
-                            //print(self.currentTime)
                             GlobalVaribles.sharedInstance.currentTime = socketMessage as! String
                         }
                     }
