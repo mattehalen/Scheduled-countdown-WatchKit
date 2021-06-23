@@ -21,6 +21,6 @@ class GlobalVaribles: NSObject,ObservableObject {
     @Published var connected = false
     
     func startSocket(){
-       // SocketIOManager.sharedInstance.establishConnection()
+        SocketIOManager.sharedInstance.establishConnection()
     }
 }
