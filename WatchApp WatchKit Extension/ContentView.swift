@@ -7,10 +7,11 @@
 //
 
 import SwiftUI
+import SocketIO
 
-final class Service: ObservableObject{
-    static let sharedInstance1 = Service()
-    
+final class WatchService: ObservableObject{
+    static let sharedInstance1 = WatchService()
+
     let BundleVersion = Bundle.main.infoDictionary?["CFBundleVersion"]
     let bundleIdentifier =  Bundle.main.bundleIdentifier
     
@@ -28,13 +29,11 @@ final class Service: ObservableObject{
     @Published var connected = false
     
     init() {
+        print("Watch -> Service")
+        
         self.debug_number = BundleVersion as! String
         
-        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            self.ipAddress = UserDefaults.standard.object(forKey: "ios_ip_address") as! String
-            self.default_debug_setting = UserDefaults.standard.object(forKey: "ios_debug") as! Bool
-            
             self.currentTime = GlobalVaribles.sharedInstance.currentTime
             self.title = GlobalVaribles.sharedInstance.title
             self.time = GlobalVaribles.sharedInstance.time
@@ -42,17 +41,26 @@ final class Service: ObservableObject{
             self.bgColor = GlobalVaribles.sharedInstance.bgColor
             self.countDownTimeInMS = GlobalVaribles.sharedInstance.countDownTimeInMS
             self.connected = GlobalVaribles.sharedInstance.connected
+            print("c.Time = \(self.currentTime)")
+            GlobalVaribles.sharedInstance.startSocket()
         }
-        
-        print("----------> IOS")
+        print("----------> WatchOS")
         
     }
 }
 
 struct ContentView: View {
+    @ObservedObject var service = WatchService()
+
     var body: some View {
-        Text("Scheduled countDown")
-            .padding()
+        VStack{
+            Text("Scheduled countDown - 5")
+                .padding()
+            Text("Scheduled countDown - \(service.currentTime)")
+                .padding()
+                
+        }
+        
     }
 }
 

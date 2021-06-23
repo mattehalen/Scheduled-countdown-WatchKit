@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     }
     //-------------------------------
     func applicationDidEnterBackground(_ application: UIApplication) {
-        SocketIOManager.sharedInstance.closeConnection()
+        //SocketIOManager.sharedInstance.closeConnection()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

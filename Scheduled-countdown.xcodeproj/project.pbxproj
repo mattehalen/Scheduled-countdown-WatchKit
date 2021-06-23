@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0853042226831D68005D007B /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
+		0853042326831D69005D007B /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
+		0853042426831D6A005D007B /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
+		0853042626831EFA005D007B /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 0853042526831EFA005D007B /* SocketIO */; };
 		088B4A8E265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
 		088B4A93265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
 		088B4A992660333700F882D6 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
@@ -22,6 +26,9 @@
 		08B080C62682107C0032D6EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B080C52682107C0032D6EB /* Preview Assets.xcassets */; };
 		08B080D22682107C0032D6EB /* WatchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B080D12682107C0032D6EB /* WatchAppTests.swift */; };
 		08B080DD2682107D0032D6EB /* WatchAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B080DC2682107D0032D6EB /* WatchAppUITests.swift */; };
+		08BBDD102682599700DD0592 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
+		08BBDD112682599700DD0592 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
+		08BBDD122682599800DD0592 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
 		84148FC425EE8C5200CF054F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC325EE8C5200CF054F /* AppDelegate.swift */; };
 		84148FC625EE8C5200CF054F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC525EE8C5200CF054F /* SceneDelegate.swift */; };
 		84148FC825EE8C5200CF054F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84148FC725EE8C5200CF054F /* ContentView.swift */; };
@@ -138,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0853042626831EFA005D007B /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +335,9 @@
 			dependencies = (
 			);
 			name = "WatchApp WatchKit Extension";
+			packageProductDependencies = (
+				0853042526831EFA005D007B /* SocketIO */,
+			);
 			productName = "WatchApp WatchKit Extension";
 			productReference = 08B080B3268210750032D6EB /* WatchApp WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -524,7 +535,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BBDD102682599700DD0592 /* GlobalVaribles.swift in Sources */,
 				08B080BD268210760032D6EB /* NotificationController.swift in Sources */,
+				0853042226831D68005D007B /* SocketManager.swift in Sources */,
 				08B080BB268210750032D6EB /* ContentView.swift in Sources */,
 				08B080C1268210760032D6EB /* ComplicationController.swift in Sources */,
 				08B080B9268210750032D6EB /* Scheduled_countdownApp.swift in Sources */,
@@ -536,6 +549,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BBDD112682599700DD0592 /* GlobalVaribles.swift in Sources */,
+				0853042326831D69005D007B /* SocketManager.swift in Sources */,
 				08B080D22682107C0032D6EB /* WatchAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,6 +559,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BBDD122682599800DD0592 /* GlobalVaribles.swift in Sources */,
+				0853042426831D6A005D007B /* SocketManager.swift in Sources */,
 				08B080DD2682107D0032D6EB /* WatchAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1045,6 +1062,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0853042526831EFA005D007B /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8414902425EE8E6B00CF054F /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
 		8414902525EE8E6B00CF054F /* SocketIO */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8414902425EE8E6B00CF054F /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
