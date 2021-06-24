@@ -41,8 +41,8 @@ final class WatchService: ObservableObject{
             self.bgColor = GlobalVaribles.sharedInstance.bgColor
             self.countDownTimeInMS = GlobalVaribles.sharedInstance.countDownTimeInMS
             self.connected = GlobalVaribles.sharedInstance.connected
-            print("c.Time = \(self.currentTime)")
-            GlobalVaribles.sharedInstance.startSocket()
+
+            //GlobalVaribles.sharedInstance.startSocket()
         }
         print("----------> WatchOS")
         
