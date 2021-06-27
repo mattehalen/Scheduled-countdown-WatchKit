@@ -9,6 +9,28 @@
 import SwiftUI
 import SocketIO
 
+func hexStringToUIColor (hex:String) -> UIColor {
+    var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+    if (cString.hasPrefix("#")) {
+        cString.remove(at: cString.startIndex)
+    }
+
+    if ((cString.count) != 6) {
+        return UIColor.gray
+    }
+
+    var rgbValue:UInt64 = 0
+    Scanner(string: cString).scanHexInt64(&rgbValue)
+
+    return UIColor(
+        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+        blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+        alpha: CGFloat(1.0)
+    )
+}
+
 final class WatchService: ObservableObject{
     static let sharedInstance1 = WatchService()
 
@@ -33,8 +55,9 @@ final class WatchService: ObservableObject{
         
         self.debug_number = BundleVersion as! String
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            print("currentTime = \(GlobalVaribles.sharedInstance.currentTime)")
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
+            GlobalVaribles.sharedInstance.startSocket()
+            
             self.currentTime = GlobalVaribles.sharedInstance.currentTime
             self.title = GlobalVaribles.sharedInstance.title
             self.time = GlobalVaribles.sharedInstance.time
@@ -43,7 +66,6 @@ final class WatchService: ObservableObject{
             self.countDownTimeInMS = GlobalVaribles.sharedInstance.countDownTimeInMS
             self.connected = GlobalVaribles.sharedInstance.connected
 
-            GlobalVaribles.sharedInstance.startSocket()
         }
         print("----------> WatchOS")
         
@@ -54,14 +76,28 @@ struct ContentView: View {
     @ObservedObject var service = WatchService()
 
     var body: some View {
-        VStack{
-            Text("Scheduled countDown - 5")
-                .padding()
-            Text("Scheduled countDown - \(service.currentTime)")
-                .padding()
-                
-        }
-        
+        Color.init(hexStringToUIColor(hex: service.bgColor)).edgesIgnoringSafeArea(.all)
+        .frame(
+            maxWidth: .infinity,
+            maxHeight: .infinity
+        )
+        .overlay(
+            VStack{
+                if(service.connected){
+                    if(service.countDownBool){
+                        Text(service.title).font(.system(size: 15, weight: .medium, design: .default)).foregroundColor(Color.white)
+                        Text(service.time).font(.system(size: 30, weight: .heavy, design: .default)).foregroundColor(Color.white)
+                    }else{
+                        Text(service.currentTime).fontWeight(.heavy).font(.system(size: 30, weight: .bold, design: .default)).foregroundColor(Color.white)
+                    }
+                }
+                else{
+                    Text("Not Connected to Socket.IO Server")
+                        .fontWeight(.heavy).font(.system(size: 15, weight: .bold, design: .default)).foregroundColor(Color.white)
+                }
+            }
+        )
+
     }
 }
 

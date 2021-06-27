@@ -53,7 +53,7 @@ final class Service: ObservableObject{
         self.debug_number = BundleVersion as! String
         
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
             self.ipAddress = UserDefaults.standard.object(forKey: "ios_ip_address") as! String
             self.default_debug_setting = UserDefaults.standard.object(forKey: "ios_debug") as! Bool
             
