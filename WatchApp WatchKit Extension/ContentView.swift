@@ -34,6 +34,7 @@ final class WatchService: ObservableObject{
         self.debug_number = BundleVersion as! String
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            print("currentTime = \(GlobalVaribles.sharedInstance.currentTime)")
             self.currentTime = GlobalVaribles.sharedInstance.currentTime
             self.title = GlobalVaribles.sharedInstance.title
             self.time = GlobalVaribles.sharedInstance.time
@@ -42,7 +43,7 @@ final class WatchService: ObservableObject{
             self.countDownTimeInMS = GlobalVaribles.sharedInstance.countDownTimeInMS
             self.connected = GlobalVaribles.sharedInstance.connected
 
-            //GlobalVaribles.sharedInstance.startSocket()
+            GlobalVaribles.sharedInstance.startSocket()
         }
         print("----------> WatchOS")
         
