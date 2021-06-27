@@ -92,7 +92,7 @@ class SocketIOManager: NSObject,ObservableObject {
 
     func establishConnection() {
         socket.connect()
-        print("Connected to Socket !")
+        //print("Connected to Socket !")
         //GlobalVaribles.sharedInstance.connected = true
     }
 

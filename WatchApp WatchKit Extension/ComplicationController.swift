@@ -102,6 +102,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     // Return a modular small template.
     private func createModularSmallTemplate(forDate date: Date) -> CLKComplicationTemplate {
+        
+        print(">>> createModularSmallTemplate <<<")
         var title = CLKSimpleTextProvider(text: "Loading")
         var time = CLKSimpleTextProvider(text: "...")
         GlobalVaribles.sharedInstance.startSocket()
@@ -110,13 +112,13 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         if(GlobalVaribles.sharedInstance.title == "G.Test.Title"){
             print(">>>>> Lets see if we can change title depeding on ....")
             
+            
         }else{
             title = CLKSimpleTextProvider(text: GlobalVaribles.sharedInstance.title)
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Lets see if we can change title depeding on ....")
         }
         if(GlobalVaribles.sharedInstance.time == "G.Test.Time"){
-            
 
-            
         }else{
             time = CLKSimpleTextProvider(text: GlobalVaribles.sharedInstance.time)
         }

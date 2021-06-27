@@ -5,6 +5,7 @@ Abstract:
 A delegate object for the WatchKit extension that implements the needed life cycle methods.
 */
 
+import ClockKit
 import WatchKit
 import os
 
@@ -18,6 +19,30 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     }
+    func applicationDidBecomeActive(){
+        print("--------------------------------------------------")
+        print("applicationDidBecomeActive")
+        print("--------------------------------------------------")
+
+        
+    }
+    func applicationWillResignActive(){
+        print("--------------------------------------------------")
+        print("applicationWillResignActive")
+        print("--------------------------------------------------")
+    }
+    func applicationWillEnterForeground(){
+        print("--------------------------------------------------")
+        print("applicationWillEnterForeground")
+        print("--------------------------------------------------")
+    }
+    func applicationDidEnterBackground(){
+        print("--------------------------------------------------")
+        print("applicationDidEnterBackground")
+        print("--------------------------------------------------")
+    }
+
+
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
         print("__________________________________________________")
         print("Handling a background task...")
