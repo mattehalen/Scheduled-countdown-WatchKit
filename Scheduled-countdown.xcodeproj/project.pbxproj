@@ -469,7 +469,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F8993Q6N82;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown-macos.WatchApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.WatchApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -482,7 +482,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F8993Q6N82;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown-macos.WatchApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.WatchApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -498,7 +498,7 @@
 				DEVELOPMENT_TEAM = F8993Q6N82;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchApp WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown-macos.WatchApp.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.WatchApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -518,7 +518,7 @@
 				DEVELOPMENT_TEAM = F8993Q6N82;
 				IBSC_MODULE = WatchApp_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchApp WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown-macos.WatchApp.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.WatchApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -542,7 +542,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown-macos.WatchApp.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.WatchApp.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -566,7 +566,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown-macos.WatchApp.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Scheduled-countdown.WatchApp.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
