@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		084AB6812688FD0600875D2C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084AB6802688FD0600875D2C /* ExtensionDelegate.swift */; };
 		0853042226831D68005D007B /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
 		0853042626831EFA005D007B /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 0853042526831EFA005D007B /* SocketIO */; };
 		088B4A8E265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
@@ -85,6 +86,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		084AB6802688FD0600875D2C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		08673DF2265E25D0008EA8D8 /* Scheduled-countdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Scheduled-countdown.entitlements"; sourceTree = "<group>"; };
 		088B4A8C265EDC0D00F882D6 /* Scheduled-countdown WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scheduled-countdown WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		088B4A8D265EDC0E00F882D6 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		08B080B7268210750032D6EB /* WatchApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				084AB6802688FD0600875D2C /* ExtensionDelegate.swift */,
 				08B080B8268210750032D6EB /* Scheduled_countdownApp.swift */,
 				08B080BA268210750032D6EB /* ContentView.swift */,
 				08B080BC268210750032D6EB /* NotificationController.swift */,
@@ -415,6 +418,7 @@
 			files = (
 				08BBDD102682599700DD0592 /* GlobalVaribles.swift in Sources */,
 				08B080BD268210760032D6EB /* NotificationController.swift in Sources */,
+				084AB6812688FD0600875D2C /* ExtensionDelegate.swift in Sources */,
 				0853042226831D68005D007B /* SocketManager.swift in Sources */,
 				08B080BB268210750032D6EB /* ContentView.swift in Sources */,
 				08B080C1268210760032D6EB /* ComplicationController.swift in Sources */,
