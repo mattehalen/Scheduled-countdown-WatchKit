@@ -10,6 +10,7 @@
 		084AB6812688FD0600875D2C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084AB6802688FD0600875D2C /* ExtensionDelegate.swift */; };
 		0853042226831D68005D007B /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
 		0853042626831EFA005D007B /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 0853042526831EFA005D007B /* SocketIO */; };
+		085A253B268F6F2E006CE2CD /* myWatchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A253A268F6F2E006CE2CD /* myWatchDelegate.swift */; };
 		088B4A8E265EDC0E00F882D6 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A8D265EDC0E00F882D6 /* SocketManager.swift */; };
 		088B4A93265F90B100F882D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088B4A92265F90B000F882D6 /* Settings.bundle */; };
 		088B4A992660333700F882D6 /* GlobalVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4A982660333600F882D6 /* GlobalVaribles.swift */; };
@@ -87,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		084AB6802688FD0600875D2C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		085A253A268F6F2E006CE2CD /* myWatchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myWatchDelegate.swift; sourceTree = "<group>"; };
 		08673DF2265E25D0008EA8D8 /* Scheduled-countdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Scheduled-countdown.entitlements"; sourceTree = "<group>"; };
 		088B4A8C265EDC0D00F882D6 /* Scheduled-countdown WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scheduled-countdown WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		088B4A8D265EDC0E00F882D6 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				08B080C72682107C0032D6EB /* Info.plist */,
 				08B080C82682107C0032D6EB /* PushNotificationPayload.apns */,
 				08B080C42682107C0032D6EB /* Preview Content */,
+				085A253A268F6F2E006CE2CD /* myWatchDelegate.swift */,
 			);
 			path = "WatchApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				08BBDD102682599700DD0592 /* GlobalVaribles.swift in Sources */,
 				08B080BD268210760032D6EB /* NotificationController.swift in Sources */,
 				084AB6812688FD0600875D2C /* ExtensionDelegate.swift in Sources */,
+				085A253B268F6F2E006CE2CD /* myWatchDelegate.swift in Sources */,
 				0853042226831D68005D007B /* SocketManager.swift in Sources */,
 				08B080BB268210750032D6EB /* ContentView.swift in Sources */,
 				08B080C1268210760032D6EB /* ComplicationController.swift in Sources */,

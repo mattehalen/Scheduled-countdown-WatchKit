@@ -39,32 +39,11 @@ final class MyUserDefaults: ObservableObject{
     @Published var debug_number     = ""
     @Published var ipAddress        = ""
     @Published var default_debug_setting = false
-//
-//    @Published var currentTime = ""
-//    @Published var title = ""
-//    @Published var time = ""
-//    @Published var countDownBool = true
-//    @Published var bgColor = "#000000"
-//    @Published var countDownTimeInMS = 0
-//    @Published var connected = false
     
     init() {
         self.debug_number = BundleVersion as! String
         self.ipAddress = UserDefaults.standard.object(forKey: "ios_ip_address") as! String
         self.default_debug_setting = UserDefaults.standard.object(forKey: "ios_debug") as! Bool
-//        
-//        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
-//
-//
-//            self.currentTime = GlobalVaribles.sharedInstance.currentTime
-//            self.title = GlobalVaribles.sharedInstance.title
-//            self.time = GlobalVaribles.sharedInstance.time
-//            self.countDownBool = GlobalVaribles.sharedInstance.countDownBool
-//            self.bgColor = GlobalVaribles.sharedInstance.bgColor
-//            self.countDownTimeInMS = GlobalVaribles.sharedInstance.countDownTimeInMS
-//            self.connected = GlobalVaribles.sharedInstance.connected
-//        }
-        
         print("----------> IOS")
         
     }
