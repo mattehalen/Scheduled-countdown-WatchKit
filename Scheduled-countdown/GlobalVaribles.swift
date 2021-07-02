@@ -19,6 +19,8 @@ class GlobalVaribles: NSObject,ObservableObject {
     @Published var bgColor = "#000000"
     @Published var countDownTimeInMS = 0
     @Published var connected = false
+    @Published var default_debug_setting = false
+    @Published var ipAddress        = ""
     
     func startSocket(){
         SocketIOManager.sharedInstance.establishConnection()

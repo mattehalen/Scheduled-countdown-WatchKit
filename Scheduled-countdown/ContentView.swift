@@ -30,41 +30,40 @@ func hexStringToUIColor (hex:String) -> UIColor {
     )
 }
 
-final class Service: ObservableObject{
-    static let sharedInstance1 = Service()
+final class MyUserDefaults: ObservableObject{
+    static let sharedInstance1 = MyUserDefaults()
     
     let BundleVersion = Bundle.main.infoDictionary?["CFBundleVersion"]
     let bundleIdentifier =  Bundle.main.bundleIdentifier
     
-    var number = Int.random(in: 0..<100)
     @Published var debug_number     = ""
     @Published var ipAddress        = ""
     @Published var default_debug_setting = false
-    
-    @Published var currentTime = ""
-    @Published var title = ""
-    @Published var time = ""
-    @Published var countDownBool = true
-    @Published var bgColor = "#000000"
-    @Published var countDownTimeInMS = 0
-    @Published var connected = false
+//
+//    @Published var currentTime = ""
+//    @Published var title = ""
+//    @Published var time = ""
+//    @Published var countDownBool = true
+//    @Published var bgColor = "#000000"
+//    @Published var countDownTimeInMS = 0
+//    @Published var connected = false
     
     init() {
         self.debug_number = BundleVersion as! String
-        
-        
-        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
-            self.ipAddress = UserDefaults.standard.object(forKey: "ios_ip_address") as! String
-            self.default_debug_setting = UserDefaults.standard.object(forKey: "ios_debug") as! Bool
-            
-            self.currentTime = GlobalVaribles.sharedInstance.currentTime
-            self.title = GlobalVaribles.sharedInstance.title
-            self.time = GlobalVaribles.sharedInstance.time
-            self.countDownBool = GlobalVaribles.sharedInstance.countDownBool
-            self.bgColor = GlobalVaribles.sharedInstance.bgColor
-            self.countDownTimeInMS = GlobalVaribles.sharedInstance.countDownTimeInMS
-            self.connected = GlobalVaribles.sharedInstance.connected
-        }
+        self.ipAddress = UserDefaults.standard.object(forKey: "ios_ip_address") as! String
+        self.default_debug_setting = UserDefaults.standard.object(forKey: "ios_debug") as! Bool
+//        
+//        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
+//
+//
+//            self.currentTime = GlobalVaribles.sharedInstance.currentTime
+//            self.title = GlobalVaribles.sharedInstance.title
+//            self.time = GlobalVaribles.sharedInstance.time
+//            self.countDownBool = GlobalVaribles.sharedInstance.countDownBool
+//            self.bgColor = GlobalVaribles.sharedInstance.bgColor
+//            self.countDownTimeInMS = GlobalVaribles.sharedInstance.countDownTimeInMS
+//            self.connected = GlobalVaribles.sharedInstance.connected
+//        }
         
         print("----------> IOS")
         
@@ -77,8 +76,8 @@ func openSettings(){
 
 
 struct ContentView: View {
-    @ObservedObject var service = Service()
-    lazy var test2 = SocketIOManager()
+    var settings = MyUserDefaults()
+    @StateObject var service = GlobalVaribles.sharedInstance
 
     var body: some View {
         Color.init(hexStringToUIColor(hex: service.bgColor)).edgesIgnoringSafeArea(.all)
@@ -88,16 +87,16 @@ struct ContentView: View {
         )
         .overlay(
             VStack{
-                if(service.default_debug_setting){
+                if(settings.default_debug_setting){
                     Text("Debug")
                         .fontWeight(.heavy)
                         .font(.system(size: 70, weight: .bold, design: .default))
                         .foregroundColor(Color.white)
                     Spacer()
                     Group{
-                        Text("debug_number = \(service.debug_number)")
-                        Text("ipAddress = \(service.ipAddress)").foregroundColor(Color.white)
-                        Text("default_debug_setting = \(String(service.default_debug_setting))").foregroundColor(Color.white)
+                        Text("debug_number = \(settings.debug_number)")
+                        Text("ipAddress = \(settings.ipAddress)").foregroundColor(Color.white)
+                        Text("default_debug_setting = \(String(settings.default_debug_setting))").foregroundColor(Color.white)
                     }
                     Group{
                         Text("currentTime = \(service.currentTime)").fontWeight(.heavy).font(.largeTitle).foregroundColor(Color.white)
