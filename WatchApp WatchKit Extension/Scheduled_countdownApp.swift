@@ -20,24 +20,24 @@ struct Scheduled_countdownApp: App {
                 ContentView()
             }
         }
-        .onChange(of: scenePhase) { phase in
-            switch phase{
-            case .active:
-                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
-                print("Active")
-                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
-            case .inactive:
-                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
-                print("inactive")
-                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
-            case .background:
-                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
-                print("background")
-                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
-            @unknown default:
-                print("something new added by apple")
-            }
-        }
+//        .onChange(of: scenePhase) { phase in
+//            switch phase{
+//            case .active:
+//                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
+//                print("Active")
+//                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
+//            case .inactive:
+//                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
+//                print("inactive")
+//                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
+//            case .background:
+//                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
+//                print("background")
+//                print("->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->")
+//            @unknown default:
+//                print("something new added by apple")
+//            }
+//        }
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }

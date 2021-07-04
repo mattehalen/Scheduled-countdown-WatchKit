@@ -12,34 +12,23 @@ import os
 // The app's extension delegate.
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
     func applicationDidFinishLaunching(){
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        print(">>>>> applicationDidFinishLaunching")
     }
     func applicationDidBecomeActive(){
-        print("--------------------------------------------------")
-        print("applicationDidBecomeActive")
-        print("--------------------------------------------------")
-
-        
+        print(">>>>>>>>>> applicationDidBecomeActive")
     }
     func applicationWillResignActive(){
-        print("--------------------------------------------------")
-        print("applicationWillResignActive")
-        print("--------------------------------------------------")
+        print(">>>>>>>>>>>>>>> applicationWillResignActive")
     }
     func applicationWillEnterForeground(){
-        print("--------------------------------------------------")
-        print("applicationWillEnterForeground")
-        print("--------------------------------------------------")
+        print(">>>>>>>>>>>>>>>>>>>> applicationWillEnterForeground")
     }
     func applicationDidEnterBackground(){
-        print("--------------------------------------------------")
-        print("applicationDidEnterBackground")
-        print("--------------------------------------------------")
+        print(">>>>>>>>>>>>>>>>>>>>>>>>> applicationDidEnterBackground")
+        scheduleBackgroundRefreshTasks()
+    }
+    func updateActiveComplications(){
+        
     }
 
 
@@ -47,13 +36,12 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         print("__________________________________________________")
         print("Handling a background task...")
         print("App State: \(WKExtension.shared().applicationState.rawValue)")
+        print(GlobalVaribles.sharedInstance.currentTime)
         print("__________________________________________________")
 
         
         for task in backgroundTasks {
-            print("++++++++++++++++++++++++++++++++++++++++++++++++++")
-            print("Task: \(task)")
-            print("++++++++++++++++++++++++++++++++++++++++++++++++++")
+            print("backgroundTasks = \(backgroundTasks)")
 
             switch task {
             // Handle background refresh tasks.
@@ -78,21 +66,24 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 }
 
 func scheduleBackgroundRefreshTasks() {
-    
-    
-    print("**************************************************")
-    print("Scheduling a background task.")
-    print("**************************************************")
-
+    print("-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>")
+    print(GlobalVaribles.sharedInstance.title)
+    print(GlobalVaribles.sharedInstance.currentTime)
+    print("-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>")
     let watchExtension = WKExtension.shared()
-    let targetDate = Date().addingTimeInterval(3*60)
+    let targetDate = Date().addingTimeInterval(60)
+    let title = GlobalVaribles.sharedInstance.title
+    let time = GlobalVaribles.sharedInstance.time
+    let info: NSDictionary = [
+        "title" : title,
+        "time": time
+    ]
     
-    watchExtension.scheduleBackgroundRefresh(withPreferredDate: targetDate, userInfo: nil) { (error) in
+    watchExtension.scheduleBackgroundRefresh(withPreferredDate: targetDate, userInfo: info) { (error) in
         if let error = error {
             print("An error occurred while scheduling a background refresh task: \(error.localizedDescription)")
             return
         }
-        
-        print("Task scheduled!")
+        print("Task scheduled with targetDate = \(targetDate).")
     }
 }

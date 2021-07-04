@@ -26,7 +26,10 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     // MARK: - Timeline Population
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
-        handler(createTimelineEntry(forComplication: complication, date: Date()))
+        print("////////////////////////////////////////////////////////////")
+        print("getCurrentTimelineEntry")
+        print("////////////////////////////////////////////////////////////")
+            handler(createTimelineEntry(forComplication: complication, date: Date()))
     }
     
     // Return future timeline entries.
@@ -35,6 +38,10 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
                             limit: Int,
                             withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
         
+        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        print("getTimelineEntries")
+        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+
         let fiveMinutes = 1.0 * 60
         let twentyFourHours = 24.0 * 60.0 * 60.0
         
@@ -44,7 +51,14 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         let endDate = date.addingTimeInterval(twentyFourHours)
         
         while (current.compare(endDate) == .orderedAscending) && (entries.count < limit) {
-            entries.append(createTimelineEntry(forComplication: complication, date: current))
+            for i in 0..<3600 {
+                let line1 = CLKSimpleTextProvider(text:GlobalVaribles.sharedInstance.title)
+                let line2 = CLKSimpleTextProvider(text:"\(GlobalVaribles.sharedInstance.currentTime) and \(i)")
+                let template = CLKComplicationTemplateModularLargeStandardBody(headerTextProvider: line1, body1TextProvider: line2)
+                let entry = CLKComplicationTimelineEntry(date: date.addingTimeInterval(Double(i)), complicationTemplate: template)
+                    entries.append(entry)
+            }
+            //entries.append(createTimelineEntry(forComplication: complication, date: current))
             current = current.addingTimeInterval(fiveMinutes)
         }
         
@@ -104,24 +118,9 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     private func createModularSmallTemplate(forDate date: Date) -> CLKComplicationTemplate {
         
         print(">>> createModularSmallTemplate <<<")
-        var title = CLKSimpleTextProvider(text: "Loading")
-        var time = CLKSimpleTextProvider(text: "...")
-        GlobalVaribles.sharedInstance.startSocket()
-
-        
-        if(GlobalVaribles.sharedInstance.title == "G.Test.Title"){
-            print(">>>>> Lets see if we can change title depeding on ....")
-            
-            
-        }else{
-            title = CLKSimpleTextProvider(text: GlobalVaribles.sharedInstance.title)
-            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Lets see if we can change title depeding on ....")
-        }
-        if(GlobalVaribles.sharedInstance.time == "G.Test.Time"){
-
-        }else{
-            time = CLKSimpleTextProvider(text: GlobalVaribles.sharedInstance.time)
-        }
+        let title = CLKSimpleTextProvider(text: "Loading")
+        let time = CLKSimpleTextProvider(text: "...")
+//        GlobalVaribles.sharedInstance.startSocket()
         
         // Create the template using the providers.
         return CLKComplicationTemplateModularSmallStackText(line1TextProvider: title,
@@ -269,4 +268,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             bottomTextProvider: title,
             centerTextProvider: time)
     }
+    
+    
+    
+    
 }
